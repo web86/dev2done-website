@@ -1,0 +1,14 @@
+/* Dev2Done ambient hero: cursor-following spotlight and drifting CSS grid.
+   A self-contained, dependency-free adaptation of our selected experiment. */
+.hero {background:radial-gradient(ellipse 75% 45% at 50% 25%,#13213e 0%,#0b1428 62%,#070c17 100%);}
+.hero-centered {z-index:2;}
+.hero-visual {position:relative;z-index:2;}
+.hero-copy {position:relative;z-index:2;}
+.fx-ambient {position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1;isolation:isolate;background:radial-gradient(ellipse 44% 42% at 50% 29%,rgba(47,74,144,.16),transparent 90%);}
+.fx-moving-grid {position:absolute;inset:-70px;background-image:linear-gradient(90deg,rgba(147,167,230,.115) 1px,transparent 1px),linear-gradient(rgba(147,167,230,.115) 1px,transparent 1px);background-size:46px 46px;background-position:0 0;animation:ambient-pan 19s linear infinite;mask-image:radial-gradient(ellipse 76% 72% at 50% 39%,#000 21%,transparent 94%);-webkit-mask-image:radial-gradient(ellipse 76% 72% at 50% 39%,#000 21%,transparent 94%);}
+.fx-spot {position:absolute;left:0;top:0;width:750px;height:750px;transform:translate3d(calc(50vw - 375px),90px,0);border-radius:50%;background:radial-gradient(circle,rgba(104,125,255,.35) 0%,rgba(79,103,224,.23) 19%,rgba(76,112,219,.12) 39%,rgba(61,99,211,.042) 59%,transparent 75%);filter:blur(20px);mix-blend-mode:screen;will-change:transform;}
+.fx-spot::after {content:"";position:absolute;inset:15%;border-radius:50%;background:radial-gradient(circle,rgba(144,162,255,.15),transparent 66%);}
+.fx-ambient-fade {position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,9,20,.22) 0%,transparent 25%,transparent 67%,#080d19bd 97%),radial-gradient(ellipse 85% 72% at 50% 32%,transparent 32%,rgba(4,8,18,.62) 100%);}
+@keyframes ambient-pan {from{background-position:0 0}to{background-position:46px 46px}}
+@media(max-width:650px){.fx-moving-grid {opacity:.72}.fx-spot{width:520px;height:520px;transform:translate3d(calc(50vw - 260px),80px,0);filter:blur(15px)}}
+@media(prefers-reduced-motion:reduce){.fx-moving-grid {animation:none}.fx-spot {will-change:auto}}

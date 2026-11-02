@@ -1,0 +1,31 @@
+/* Original CSS grid with an independent ambient spotlight. */
+/* Dev2Done hero-only experiments; shared structure. */
+:root { color-scheme:dark; }
+html {scroll-behavior:smooth}
+body {background:#080d19;}
+.hero { background:#080d19; }
+.hero-centered {z-index:2;}
+.hero-visual {position:relative; z-index:2;}
+.hero-copy {position:relative;z-index:2;}
+/* Keep the original dark-v2 typography and layout unchanged in both options. */
+.hero-window {box-shadow:0 55px 120px #0009,0 1px 0 #96aaff2b,0 0 120px #4463c01c}
+.compare-band {position:relative;z-index:1;background:#0c1526;border-top:1px solid #263955;padding:105px 0 120px;min-height:470px;}
+.compare-inner {max-width:960px;text-align:center;}
+.compare-inner h2 {font-size:clamp(34px,4.4vw,57px);line-height:1.16;letter-spacing:-.055em;margin:0 0 17px;color:#f2f6ff;font-weight:720;}
+.compare-inner>p {color:#aebbd4;font-size:18px;line-height:1.7;max-width:700px;margin:0 auto 30px;font-weight:380;}
+.compare-links {display:flex;justify-content:center;gap:13px;flex-wrap:wrap;}
+.compare-link {border:1px solid #3c506e;border-radius:11px;padding:13px 19px;color:#e4ebfd;font-size:16px;font-weight:600;display:flex;align-items:center;gap:10px;transition:background .2s,border-color .2s;}
+.compare-link:hover {background:#192844;border-color:#718dcb}
+.compare-link.is-current {background:#22335b;border-color:#5c77b9}
+.fx-reactive,.fx-ambient {position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1;}
+@media(max-width:650px){.compare-band {padding:70px 0 90px;min-height:370px}.compare-inner>p{font-size:16px}.hero {padding-top:127px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-header,.button,.compare-link{transition:none}}
+.hero {background:radial-gradient(ellipse 75% 45% at 50% 25%,#13213e 0%,#0b1428 62%,#070c17 100%);}
+.fx-ambient {isolation:isolate;background:radial-gradient(ellipse 44% 42% at 50% 29%,rgba(47,74,144,.16),transparent 90%);}
+.fx-moving-grid {position:absolute;inset:-70px;background-image:linear-gradient(90deg,rgba(147,167,230,.115) 1px,transparent 1px),linear-gradient(rgba(147,167,230,.115) 1px,transparent 1px);background-size:46px 46px;background-position:0 0;animation:ambient-pan 19s linear infinite;mask-image:radial-gradient(ellipse 76% 72% at 50% 39%,#000 21%,transparent 94%);-webkit-mask-image:radial-gradient(ellipse 76% 72% at 50% 39%,#000 21%,transparent 94%);}
+.fx-spot {position:absolute;left:0;top:0;width:750px;height:750px;transform:translate3d(calc(50vw - 375px),90px,0);border-radius:50%;background:radial-gradient(circle,rgba(104,125,255,.35) 0%,rgba(79,103,224,.23) 19%,rgba(76,112,219,.12) 39%,rgba(61,99,211,.042) 59%,transparent 75%);filter:blur(20px);mix-blend-mode:screen;will-change:transform;}
+.fx-spot::after {content:"";position:absolute;inset:15%;border-radius:50%;background:radial-gradient(circle,rgba(144,162,255,.15),transparent 66%);}
+.fx-ambient-fade {position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,9,20,.22) 0%,transparent 25%,transparent 67%,#080d19bd 97%),radial-gradient(ellipse 85% 72% at 50% 32%,transparent 32%,rgba(4,8,18,.62) 100%);}
+@keyframes ambient-pan{from{background-position:0 0}to{background-position:46px 46px}}
+@media(max-width:650px){.fx-moving-grid {opacity:.72}.fx-spot{width:520px;height:520px;transform:translate3d(calc(50vw - 260px),80px,0);filter:blur(15px)}}
+@media(prefers-reduced-motion:reduce){.fx-moving-grid {animation:none}.fx-spot {will-change:auto}}
