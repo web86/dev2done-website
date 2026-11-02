@@ -22,3 +22,107 @@
 body.demo-scroll-lock{overflow:hidden}
 @media(max-width:700px){.demo-toolbar{padding:15px;gap:12px}.demo-window-actions{justify-content:space-between;margin:0;width:100%}.demo-frame-panel{height:min(72vh,620px);min-height:380px}.demo-footer{line-height:1.5}.demo-footer a{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.demo-frame-spinner{animation:none}.demo-frame-loading{transition:none}}
+
+
+/* Hero — the real product demo replaces the illustrative screenshot.
+   Keep the existing Ambient Grid, centered headline and gradient palette. */
+.hero .hero-live-demo {
+  position:relative;
+  z-index:2;
+  width:min(100%,1140px);
+  margin:58px auto 56px;
+  text-align:left;
+  scroll-margin-top:100px;
+  isolation:isolate;
+}
+.hero .hero-live-demo::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  inset:-22px -26px -16px;
+  border-radius:34px;
+  background:radial-gradient(ellipse at 8% 40%,rgba(27,157,255,.20),transparent 57%),
+             radial-gradient(ellipse at 94% 65%,rgba(165,60,241,.19),transparent 60%);
+  filter:blur(35px);
+}
+.hero .hero-live-demo .demo-stage {
+  border:1px solid transparent;
+  border-radius:20px;
+  background:linear-gradient(#11192c,#11192c) padding-box,
+             linear-gradient(110deg,rgba(35,187,255,.78),rgba(97,105,250,.4) 51%,rgba(188,72,251,.81)) border-box;
+  box-shadow:0 28px 88px rgba(0,0,0,.55),
+             -12px 2px 60px rgba(28,137,255,.16),
+             15px 4px 65px rgba(159,65,243,.16);
+}
+.hero .hero-live-demo .demo-toolbar {
+  padding:16px 22px;
+  gap:14px;
+  border-bottom:1px solid rgba(128,157,213,.18);
+  background:linear-gradient(110deg,rgba(34,57,97,.4),rgba(22,24,52,.28));
+}
+.hero .hero-live-demo .role-tabs {
+  max-width:100%;
+}
+.hero .hero-live-demo .role-tab {
+  font-size:15px;
+  padding:11px 18px;
+}
+.hero .hero-live-demo .demo-link,
+.hero .hero-live-demo .demo-fullscreen {
+  font-size:15px;
+}
+.hero .hero-live-demo .demo-frame-panel {
+  height:clamp(490px,58vw,710px);
+}
+.hero .hero-live-demo .demo-footer {
+  padding:11px 22px;
+  font-size:14px;
+  color:#a8b9dd;
+}
+.hero .hero-live-demo .demo-footer a { font-size:14px; }
+.hero .hero-live-demo .demo-frame-stack { min-width:0; }
+
+@media(max-width:900px) {
+  .hero .hero-live-demo {
+    width:100%;
+    margin:48px auto 42px;
+    scroll-margin-top:85px;
+  }
+  .hero .hero-live-demo .demo-frame-panel { height:600px; }
+}
+@media(max-width:650px) {
+  .hero .hero-live-demo {
+    margin:35px auto 28px;
+    scroll-margin-top:75px;
+  }
+  .hero .hero-live-demo::before { inset:-12px; filter:blur(24px); }
+  .hero .hero-live-demo .demo-stage { border-radius:14px; }
+  .hero .hero-live-demo .demo-toolbar { padding:13px; }
+  .hero .hero-live-demo .demo-window-actions { gap:11px; }
+  .hero .hero-live-demo .role-tabs { width:100%; }
+  .hero .hero-live-demo .role-tab {
+    min-width:0; flex:1;
+    font-size:14px; padding:11px 6px; gap:5px;
+  }
+  .hero .hero-live-demo .demo-frame-panel { height:520px; }
+  .hero .hero-live-demo .demo-footer {
+    padding:11px 13px;
+    font-size:13px;
+  }
+  .hero .hero-live-demo .demo-footer>span { display:none; }
+  .hero .hero-live-demo .demo-footer a { font-size:13px; }
+}
+@media(max-width:360px) {
+  .hero .hero-live-demo .role-tab { font-size:13px; }
+  .hero .hero-live-demo .demo-frame-panel { height:460px; }
+}
+/* Fullscreen container must remain opaque and viewport-filling. */
+.hero .hero-live-demo .demo-stage:fullscreen,
+.hero .hero-live-demo .demo-stage.is-fullscreen-fallback {
+  border:0;
+  border-radius:0;
+  background:#090f1e;
+}
+.hero .hero-live-demo .demo-stage:fullscreen .demo-frame-panel,
+.hero .hero-live-demo .demo-stage.is-fullscreen-fallback .demo-frame-panel { height:100%; }

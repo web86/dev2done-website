@@ -8,7 +8,7 @@ The `experiments/` folder is optional and retained from the original archive.
 No Node, package manager, database or build step is required. `archive.zip` remains as the original backup.
 
 ## Demo
-The landing page loads two separate iframe views lazily and preserves their state when toggled.
+The hero section now embeds both real demo views directly below the headline and trial buttons, replacing the old synthetic preview and removing the duplicated lower demo section. The two iframe views load lazily, preserve their state when toggled and support fullscreen.
 The standalone demo is at https://app.dev2done.web86.site/demo .
 The two frames use the supplied project UUID `19fe7520-ef15-51ae-ae94-3a582ed5474e`.
 
