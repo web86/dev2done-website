@@ -1,0 +1,24 @@
+/* Real Dev2Done demo, additive to existing theme */
+.demo-stage{overflow:hidden;position:relative}
+.demo-toolbar{gap:18px;flex-wrap:wrap}
+.demo-window-actions{display:flex;align-items:center;gap:12px;margin-left:auto}
+.demo-link,.demo-fullscreen{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;line-height:1.3;font-size:14px;font-weight:600;color:#cbd8f8}
+.demo-link{text-decoration:none}.demo-link:hover{color:white}
+.demo-link .icon,.demo-fullscreen .icon{height:16px;width:16px}
+.demo-fullscreen{cursor:pointer;border-radius:10px;border:1px solid rgba(131,146,223,.5);padding:10px 15px;background:linear-gradient(#131d34,#131d34) padding-box,linear-gradient(110deg,#3a9ff7,#a25df0) border-box;color:#f5f8ff}
+.demo-fullscreen:hover{filter:brightness(1.16)}
+.demo-frame-stack{background:#0a1020;position:relative}
+.demo-frame-panel{height:clamp(470px,60vw,730px);position:relative;overflow:hidden}
+.demo-frame-panel iframe{display:block;width:100%;height:100%;border:0;background:#0a1020}
+.demo-frame-loading{display:flex;position:absolute;inset:0;z-index:1;align-items:center;justify-content:center;gap:16px;color:#b9c9f3;font-size:16px;background:radial-gradient(ellipse at 45% 45%,#172846,#09101f 72%);transition:opacity .2s}
+.demo-frame-panel.is-loaded .demo-frame-loading{opacity:0;pointer-events:none}
+.demo-frame-spinner{height:27px;width:27px;border:2px solid #2f4273;border-top-color:#38b6ff;border-right-color:#a66aff;border-radius:50%;animation:demo-spin .9s linear infinite}
+@keyframes demo-spin{to{transform:rotate(360deg)}}
+.demo-footer a{display:inline-flex;gap:7px;align-items:center;color:#a7bbf6;text-decoration:underline;text-underline-offset:3px}.demo-footer a:hover{color:white}.demo-footer a .icon{width:14px;height:14px}
+.demo-stage:fullscreen,.demo-stage.is-fullscreen-fallback{width:100%;height:100%;display:flex;flex-direction:column;border:0;border-radius:0;background:#0a1020}
+.demo-stage:fullscreen .demo-frame-stack,.demo-stage.is-fullscreen-fallback .demo-frame-stack{flex:1;min-height:0}
+.demo-stage:fullscreen .demo-frame-panel,.demo-stage.is-fullscreen-fallback .demo-frame-panel{height:100%}
+.demo-stage.is-fullscreen-fallback{position:fixed;inset:0;z-index:9999;width:100vw;height:100dvh}
+body.demo-scroll-lock{overflow:hidden}
+@media(max-width:700px){.demo-toolbar{padding:15px;gap:12px}.demo-window-actions{justify-content:space-between;margin:0;width:100%}.demo-frame-panel{height:min(72vh,620px);min-height:380px}.demo-footer{line-height:1.5}.demo-footer a{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.demo-frame-spinner{animation:none}.demo-frame-loading{transition:none}}

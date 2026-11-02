@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dev2Done — Ambient Grid Hero Experiment</title>
+  <meta name="description" content="Interactive Dev2Done dark hero background experiment">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/effect.css">
+  <script src="assets/js/ui.js" defer></script>
+  <script src="assets/js/effect.js" defer></script>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H6l-3 3v-7a8 8 0 1 1 17-4Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6zM14 2v6h5M9 13h7M9 17h7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="4"/><path d="M12 3v4m-3-4h6M8 14h.01M16 14h.01M9 18h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10M12 2c-3 3-4 6-4 10s1 7 4 10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 15l4-5 4 2 4-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="./" aria-label="Dev2Done home">
+        <span class="brand-mark" aria-hidden="true">D<span>2</span>D</span>
+        <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+        <a href="../reactive-grid/">Reactive grid</a>
+        <a href="../ambient-grid/">Ambient grid</a>
+        <a href="#compare">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-login" href="https://brief.web86.site/admin/login">Log in <svg class="icon"><use href="#i-external"/></svg></a>
+        <a class="button button-sm button-primary nav-cta" href="#preview">Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+<main id="main">
+<section class="hero section" aria-labelledby="hero-title">
+      <div class="fx-ambient" aria-hidden="true"><div class="fx-moving-grid"></div><div class="fx-spot"></div><div class="fx-ambient-fade"></div></div>
+      <div class="container hero-centered">
+        <div class="hero-copy">
+          <h1 id="hero-title">Client projects.<br><em>From brief to done.</em></h1>
+          <p class="hero-lede">Manage client projects, align on requirements, collaborate with your team, and bring AI agents into the workflow — all in one place.</p>
+          <div class="button-row hero-actions">
+            <button type="button" class="button button-primary button-lg" data-open-trial>Start free trial <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-secondary button-lg" href="#demo">Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-trial">7-day Studio trial <span aria-hidden="true">·</span> No credit card required</p>
+        </div>
+        <div class="hero-visual" id="preview" aria-label="Illustrative project workspace using synthetic demonstration data">
+          <div class="mock-window hero-window">
+            <div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span class="window-address">Dev2Done / Workspace</span><span class="window-ellipsis">•••</span></div>
+            <div class="mock-app">
+              <aside class="mock-sidebar" aria-hidden="true">
+                <div class="mock-sidebar-logo">D2D</div><div class="sidebar-divider"></div>
+                <span class="mock-side-item active"><svg class="icon"><use href="#i-layers"/></svg><span>Projects</span></span>
+                <span class="mock-side-item"><svg class="icon"><use href="#i-users"/></svg><span>Team</span></span>
+                <span class="mock-side-item"><svg class="icon"><use href="#i-bell"/></svg><span>Notifications</span></span>
+                <div class="mock-side-spacer"></div><span class="mock-side-bottom">A<span>Acme Studio</span></span>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-crumb">Projects <span>/</span> Acme Website</div>
+                <div class="mock-header-row"><div><h2>Acme Website</h2><p>Clear scope. Confident delivery.</p></div><span class="avatar-stack"><b>AL</b><b>MK</b><b class="avatar-bot">✳</b></span></div>
+                <div class="mock-stats"><div><span>Tasks</span><strong>24</strong></div><div><span>Completed</span><strong>16</strong></div><div><span>In review</span><strong>4</strong></div></div>
+                <div class="mock-progress-label"><span>Project progress</span><strong>67%</strong></div><div class="mock-progress-track"><span></span></div>
+                <div class="mock-list-title">Recent tasks <span>View all</span></div>
+                <div class="mock-task"><span class="task-check done"><svg class="icon"><use href="#i-check"/></svg></span><div><strong>Homepage layout</strong><small>#1.2 · Design</small></div><span class="mini-status green">Done</span></div>
+                <div class="mock-task"><span class="task-check review"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>Contact form</strong><small>#2.4 · Development</small></div><span class="mini-status amber">In review</span></div>
+                <div class="mock-task"><span class="task-check working"><svg class="icon"><use href="#i-code"/></svg></span><div><strong>Mobile navigation</strong><small>#2.5 · Development</small></div><span class="mini-status blue">In progress</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="compare" class="compare-band" aria-labelledby="compare-title">
+    <div class="container compare-inner">
+      <h2 id="compare-title">One design. Two atmospheres.</h2>
+      <p>Move your pointer across the hero to explore the background. The header becomes translucent when you scroll. Both examples use the same Dev2Done content.</p>
+      <div class="compare-links">
+        <a class="compare-link " href="../reactive-grid/">A · Reactive grid <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="compare-link is-current" href="../ambient-grid/">B · Ambient grid <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<dialog class="trial-dialog" id="trial-dialog" aria-labelledby="trial-title" aria-describedby="trial-description">
+    <button class="dialog-close" type="button" data-close-trial aria-label="Close dialog">×</button>
+    <div class="trial-orbit" aria-hidden="true">✦</div>
+    <h2 id="trial-title">Studio trial is coming.</h2>
+    <p id="trial-description">The 7-day Studio trial is planned for our public launch. Registration isn’t available yet — explore the interactive project demo in the meantime.</p>
+    <div class="button-row"><a class="button button-primary" href="#preview" data-close-trial>Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a><button class="button button-secondary" type="button" data-close-trial>Close</button></div>
+  </dialog>
+</body></html>

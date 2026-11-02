@@ -1,0 +1,58 @@
+/* Dev2Done v4 brand accents — additive stylesheet.
+ * Loaded last on top of existing site.css, dark.css and ambient-hero.css.
+ * Visual-only update: no layout or JS changes. */
+:root {
+  --d2d-cyan: #24C6FF;
+  --d2d-blue: #168CFA;
+  --d2d-violet: #8E57FF;
+  --d2d-purple: #C14BFA;
+  --d2d-gradient: linear-gradient(106deg,#2BC9FF 0%,#3E88FF 35%,#8156FF 70%,#C34DF6 100%);
+  --d2d-gradient-soft: linear-gradient(115deg,rgba(36,198,255,.45),rgba(127,85,255,.65),rgba(193,75,250,.5));
+}
+/* Preserve transparent header and scroll glass from v3. Replace only brand mark. */
+.brand { gap:12px; flex:0 0 auto; }
+.brand-icon { display:block; width:74px; height:45px; flex-shrink:0; }
+.brand-icon img {display:block; width:100%; height:100%; object-fit:contain;}
+.brand-lockup {display:flex;flex-direction:column;gap:0;justify-content:center;padding-left:12px;border-left:1px solid rgba(170,192,255,.44);line-height:1.02;}
+.brand-lockup strong {font-size:23px;font-weight:780;color:#f9fbff;letter-spacing:.008em;}
+.brand-lockup>span {font-size:15px;line-height:1.22;letter-spacing:.005em;font-weight:590;background:linear-gradient(90deg,#b8c8ff 10%,#598dff 50%,#b973ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.site-footer .brand-icon {width:65px;height:41px;}
+.site-footer .brand-lockup strong {font-size:20px;}
+.site-footer .brand-lockup>span {font-size:13px;}
+/* Primary actions: a bright cyan→violet gradient, never plain blue. */
+.button-primary,.button-primary:hover,.nav-cta,.nav-cta:hover {color:#071126;border-color:rgba(180,156,255,.48);box-shadow:0 8px 28px rgba(28,131,255,.23),0 5px 28px rgba(160,55,240,.15);}
+.button-primary:hover,.nav-cta:hover {filter:brightness(1.12);box-shadow:0 12px 38px rgba(23,147,255,.32),0 9px 40px rgba(155,70,255,.25);}
+/* The outline demo CTA uses the same palette but stays quiet. */
+.button-secondary,.button-secondary:hover,.button-outline-light {border:1px solid transparent;background:linear-gradient(#10192b,#10192b) padding-box,linear-gradient(115deg,rgba(47,186,255,.92),rgba(123,94,255,.66),rgba(188,70,245,.85)) border-box;color:#f3f6ff;}
+.button-secondary:hover,.button-outline-light:hover {background:linear-gradient(#17213a,#17213a) padding-box,var(--d2d-gradient) border-box;box-shadow:0 0 24px rgba(110,97,249,.19);}
+/* Headline: white-to-blue-to-violet finish, not a solid gradient on all text. */
+.hero h1 em {background:linear-gradient(102deg,#F2F5FF 3%,#A7BDFF 39%,#4F9DFE 68%,#A365FF 95%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+/* Ambient Grid remains intact, add only a wide edge glow and gradient spotlight. */
+.fx-ambient {background:radial-gradient(ellipse 32% 48% at 2% 38%,rgba(0,128,255,.12),transparent 90%),radial-gradient(ellipse 30% 46% at 98% 35%,rgba(149,42,240,.16),transparent 90%),radial-gradient(ellipse 44% 42% at 50% 29%,rgba(51,68,139,.13),transparent 90%);}
+/* .fx-spot {background:radial-gradient(circle at 39% 38%,rgba(35,172,251,.28),rgba(85,102,244,.21) 30%,rgba(157,56,225,.15) 51%,rgba(66,76,199,.035) 65%,transparent 75%);} */
+/* Existing product preview — subtle gradient edge, not a replacement. */
+.hero-window.mock-window {border:1px solid transparent;background:linear-gradient(#101929,#101929) padding-box,var(--d2d-gradient-soft) border-box;box-shadow:0 32px 86px rgba(0,0,0,.48),-20px 7px 80px rgba(18,137,255,.13),22px 3px 85px rgba(148,57,232,.15);}
+.mock-sidebar-logo img {display:block;max-width:100%;height:auto;max-height:36px;}
+.mock-progress-track span,.brand-progress-track span {background:var(--d2d-gradient);}
+.mock-side-item.active {background:linear-gradient(100deg,rgba(39,132,237,.24),rgba(123,71,223,.18));}
+/* Design system applied to current sections, not new sections. */
+.demo-stage {border:1px solid transparent;background:linear-gradient(#131e30,#131e30) padding-box,linear-gradient(115deg,rgba(50,157,250,.45),rgba(121,84,239,.27),rgba(187,74,247,.46)) border-box;}
+.role-tab.is-active {background:var(--d2d-gradient);color:#081028;box-shadow:0 4px 19px rgba(109,87,252,.22);}
+.step-item.is-active {border-color:rgba(125,99,250,.75);background:linear-gradient(115deg,rgba(39,130,234,.20),rgba(132,74,223,.16));box-shadow:0 4px 24px rgba(87,89,222,.10);}
+.step-item.is-active .step-num {border-color:transparent;color:#081125;}
+.workflow-showcase {border:1px solid transparent;background:linear-gradient(145deg,#18283f,#101b30) padding-box,linear-gradient(130deg,rgba(25,156,254,.40),rgba(167,76,236,.40)) border-box;}
+.workflow-symbol,.feature-icon {color:#d9e7ff;background:linear-gradient(#162842,#162842) padding-box,var(--d2d-gradient-soft) border-box;border:1px solid transparent;}
+.feature-card {background:linear-gradient(145deg,rgba(26,42,72,.9),rgba(17,25,44,.95));}
+.feature-card:hover {border-color:rgba(130,98,253,.68);box-shadow:0 16px 42px rgba(24,98,233,.10);}
+.ai-card {border-color:rgba(89,109,169,.43);background:linear-gradient(142deg,#1b2841,#172138 75%,#1e2040);}
+.ai-card:hover {border-color:rgba(134,90,240,.6);}
+.featured-price {border:1px solid transparent;background:linear-gradient(160deg,#1c2a47,#1a2340 68%,#231a41) padding-box,var(--d2d-gradient-soft) border-box;box-shadow:0 15px 46px rgba(83,73,191,.11);}
+.close-card {background:radial-gradient(ellipse 56% 100% at 95% 50%,rgba(149,45,245,.25),transparent 74%),radial-gradient(ellipse 60% 100% at 0% 40%,rgba(30,159,255,.24),transparent 74%),linear-gradient(115deg,#101d3b,#171a42);border:1px solid rgba(111,103,218,.53);}
+.close-card h2 em {background:var(--d2d-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.button-light {background:var(--d2d-gradient);color:#091027;box-shadow:0 10px 35px rgba(121,84,241,.18);}
+.button-light:hover {background:var(--d2d-gradient);filter:brightness(1.1);}
+/* Keep the original responsive layout; shrink only the wider horizontal brand. */
+@media(max-width:1150px){.brand-icon{width:62px;height:40px}.brand-lockup strong{font-size:19px}.brand-lockup>span{font-size:12px}.brand{gap:8px}.brand-lockup{padding-left:8px}}
+@media(max-width:650px){.brand-icon{width:56px;height:36px}.brand-lockup{padding-left:8px}.brand-lockup strong{font-size:18px}.brand-lockup>span{font-size:11px}.site-footer .brand-icon{width:61px}}
+@media(max-width:390px){.brand-icon{width:49px;height:34px}.brand-lockup strong{font-size:16px}.brand-lockup>span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.button-primary,.nav-cta{transition:none}}

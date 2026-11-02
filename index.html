@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Dev2Done keeps client projects clear—from the first request to final approval. Built for developers, simple for clients, and ready for AI collaboration.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dev2Done — Client projects, from brief to done</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/site.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/dark.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/ambient-hero.css">
+<style id="d2d-loader-critical">
+html{background:#080d19}
+html.d2d-booting body>:not(#site-loader){visibility:hidden!important}
+#site-loader{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 50%,#182044 0%,#080d19 60%);transition:opacity .38s ease;color:#f8faff}
+html.d2d-booting #site-loader,html.d2d-leaving #site-loader{display:flex}
+html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
+.d2d-loader-emblem{position:relative;font:800 clamp(64px,11vw,104px)/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.045em;background:linear-gradient(115deg,#2bc9ff,#5482ff 43%,#c34df6);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #3475fa36);animation:d2d-breathe 1.6s ease-in-out infinite alternate}
+.d2d-loader-bar{position:absolute;left:10%;right:10%;height:2px;bottom:-22px;background:linear-gradient(90deg,transparent,#4ea9ff 25%,#bb62fb 75%,transparent);transform-origin:left;animation:d2d-progress 1.35s ease-in-out infinite}
+@keyframes d2d-breathe{from{opacity:.72;transform:scale(.985)}to{opacity:1;transform:scale(1.015)}}
+@keyframes d2d-progress{0%{transform:scaleX(.04);opacity:.3}65%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:.25}}
+@media(prefers-reduced-motion:reduce){.d2d-loader-emblem,.d2d-loader-bar{animation:none}}
+</style>
+<script>document.documentElement.classList.add('d2d-booting');(function(){var done=false;function reveal(){if(done)return;done=true;document.documentElement.classList.remove('d2d-booting');document.documentElement.classList.add('d2d-leaving');setTimeout(function(){document.documentElement.classList.remove('d2d-leaving');document.getElementById('site-loader')?.remove()},410)}window.addEventListener('load',reveal,{once:true});window.addEventListener('pageshow',function(e){if(e.persisted)reveal()});setTimeout(reveal,2500)})();</script>
+  <link rel="stylesheet" href="/assets/css/brand-gradient.css">
+  <link rel="stylesheet" href="/assets/css/demo-embed.css">
+  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/ambient-hero.js" defer></script>
+  <script src="/assets/js/demo-embed.js" defer></script>
+</head>
+<body>
+  <div id="site-loader" role="status" aria-label="Loading Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
+  <!-- English-only first release. Language detection is prepared in assets/js/site.js. -->
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H6l-3 3v-7a8 8 0 1 1 17-4Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6zM14 2v6h5M9 13h7M9 17h7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="4"/><path d="M12 3v4m-3-4h6M8 14h.01M16 14h.01M9 18h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10M12 2c-3 3-4 6-4 10s1 7 4 10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 15l4-5 4 2 4-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Dev2Done home">
+        
+        <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+        <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+        <a href="#demo">Product</a>
+        <a href="#workflow">How it works</a>
+        <a href="#ai">AI & agents</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Plans</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-login" href="https://app.dev2done.web86.site/admin/login">Log in <svg class="icon"><use href="#i-external"/></svg></a>
+        <a class="button button-sm button-primary nav-cta" href="#demo">Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="fx-ambient" aria-hidden="true">
+        <div class="fx-moving-grid"></div>
+        <div class="fx-spot"></div>
+        <div class="fx-ambient-fade"></div>
+      </div>
+      <div class="container hero-centered">
+        <div class="hero-copy">
+          <h1 id="hero-title">Client projects.<br><em>From brief to done.</em></h1>
+          <p class="hero-lede">Manage client projects, align on requirements, collaborate with your team, and bring AI agents into the workflow — all in one place.</p>
+          <div class="button-row hero-actions">
+            <button type="button" class="button button-primary button-lg" data-open-trial>Start free trial <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-secondary button-lg" href="#demo">Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-trial">7-day Studio trial <span aria-hidden="true">·</span> No credit card required</p>
+        </div>
+        <div class="hero-visual" aria-label="Illustrative project workspace using synthetic demonstration data">
+          <div class="mock-window hero-window">
+            <div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span class="window-address">Dev2Done / Workspace</span><span class="window-ellipsis">•••</span></div>
+            <div class="mock-app">
+              <aside class="mock-sidebar" aria-hidden="true">
+                <div class="mock-sidebar-logo">D2D</div><div class="sidebar-divider"></div>
+                <span class="mock-side-item active"><svg class="icon"><use href="#i-layers"/></svg><span>Projects</span></span>
+                <span class="mock-side-item"><svg class="icon"><use href="#i-users"/></svg><span>Team</span></span>
+                <span class="mock-side-item"><svg class="icon"><use href="#i-bell"/></svg><span>Notifications</span></span>
+                <div class="mock-side-spacer"></div><span class="mock-side-bottom">A<span>Acme Studio</span></span>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-crumb">Projects <span>/</span> Acme Website</div>
+                <div class="mock-header-row"><div><h2>Acme Website</h2><p>Clear scope. Confident delivery.</p></div><span class="avatar-stack"><b>AL</b><b>MK</b><b class="avatar-bot">✳</b></span></div>
+                <div class="mock-stats"><div><span>Tasks</span><strong>24</strong></div><div><span>Completed</span><strong>16</strong></div><div><span>In review</span><strong>4</strong></div></div>
+                <div class="mock-progress-label"><span>Project progress</span><strong>67%</strong></div><div class="mock-progress-track"><span></span></div>
+                <div class="mock-list-title">Recent tasks <span>View all</span></div>
+                <div class="mock-task"><span class="task-check done"><svg class="icon"><use href="#i-check"/></svg></span><div><strong>Homepage layout</strong><small>#1.2 · Design</small></div><span class="mini-status green">Done</span></div>
+                <div class="mock-task"><span class="task-check review"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>Contact form</strong><small>#2.4 · Development</small></div><span class="mini-status amber">In review</span></div>
+                <div class="mock-task"><span class="task-check working"><svg class="icon"><use href="#i-code"/></svg></span><div><strong>Mobile navigation</strong><small>#2.5 · Development</small></div><span class="mini-status blue">In progress</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-demo" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-header center"><h2 id="demo-title">Powerful for you.<br><span class="muted-heading">Effortless for clients.</span></h2><p>You and your client work on the same project, without having to see the same complexity.</p></div>
+        <div class="demo-stage" id="live-demo-stage">
+          <div class="demo-toolbar">
+            <div class="role-tabs" role="tablist" aria-label="Choose demo perspective">
+              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer"><svg class="icon"><use href="#i-code"/></svg> Developer view</button>
+              <button type="button" id="tab-client" class="role-tab" role="tab" aria-selected="false" aria-controls="panel-client" data-role="client" tabindex="-1"><svg class="icon"><use href="#i-users"/></svg> Client view</button>
+            </div>
+            <div class="demo-window-actions">
+              <a class="demo-link" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Open demo <svg class="icon"><use href="#i-external"/></svg></a>
+              <button type="button" class="demo-fullscreen" id="demo-fullscreen" aria-label="Enter fullscreen demo"><svg class="icon"><use href="#i-external"/></svg><span>Fullscreen</span></button>
+            </div>
+          </div>
+          <div class="demo-frame-stack">
+            <div id="panel-developer" class="role-panel demo-frame-panel" role="tabpanel" aria-labelledby="tab-developer">
+              <div class="demo-frame-loading" data-loading="developer" role="status"><span class="demo-frame-spinner" aria-hidden="true"></span><span>Loading developer workspace…</span></div>
+              <iframe id="frame-developer" title="Dev2Done demo — Developer workspace" data-src="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
+            </div>
+            <div id="panel-client" class="role-panel demo-frame-panel" role="tabpanel" aria-labelledby="tab-client" hidden>
+              <div class="demo-frame-loading" data-loading="client" role="status"><span class="demo-frame-spinner" aria-hidden="true"></span><span>Loading client workspace…</span></div>
+              <iframe id="frame-client" title="Dev2Done demo — Client workspace" data-src="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="demo-footer"><span>See the same project from two perspectives.</span><a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Trouble loading? Open the demo directly <svg class="icon"><use href="#i-external"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-workflow" id="workflow" aria-labelledby="workflow-title"><div class="container">
+      <div class="section-header"><h2 id="workflow-title">Less back-and-forth.<br><span class="muted-heading">More forward progress.</span></h2><p>Turn loosely defined requests into agreed work, keep everyone informed, and close the loop with a proper review.</p></div>
+      <div class="workflow-layout"><div class="step-list" role="tablist" aria-label="Project workflow stages">
+        <button type="button" class="step-item is-active" data-step="0" role="tab" aria-selected="true"><span class="step-num">01</span><span class="step-words"><strong>Client request</strong><small>The idea starts with the client</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="step-item" data-step="1" role="tab" aria-selected="false" tabindex="-1"><span class="step-num">02</span><span class="step-words"><strong>Clarify</strong><small>Make the requirements clear</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="step-item" data-step="2" role="tab" aria-selected="false" tabindex="-1"><span class="step-num">03</span><span class="step-words"><strong>Agree on scope</strong><small>Approve what will be built</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="step-item" data-step="3" role="tab" aria-selected="false" tabindex="-1"><span class="step-num">04</span><span class="step-words"><strong>Build</strong><small>Move work through development</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="step-item" data-step="4" role="tab" aria-selected="false" tabindex="-1"><span class="step-num">05</span><span class="step-words"><strong>Review</strong><small>Let the client check the result</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="step-item" data-step="5" role="tab" aria-selected="false" tabindex="-1"><span class="step-num">06</span><span class="step-words"><strong>Done</strong><small>Keep the decision on record</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div><div class="workflow-showcase"><div class="workflow-topline"><span><span class="live-dot"></span> EXAMPLE PROJECT WORKFLOW</span><span id="step-counter">STEP 01 / 06</span></div><div class="workflow-symbol"><svg class="icon"><use href="#i-message"/></svg></div><span class="workflow-pill" id="step-tag">New request</span><h3 id="step-title">It starts with a simple idea.</h3><p id="step-description">Your client describes what they need in their own words. Dev2Done keeps the request in the project, ready for clarification and planning.</p><div class="workflow-example" id="step-example">“We need a contact form that works well on phones.”</div><div class="workflow-showcase-bottom"><span>ACME WEBSITE</span><span>Every decision stays connected to the task.</span></div></div></div>
+      <p class="workflow-footnote"><svg class="icon"><use href="#i-check-circle"/></svg> Scope approval and final acceptance are separate steps. No more confusing "approved requirements" with "finished work".</p>
+    </div></section>
+
+    <section class="section ai-section" id="ai" aria-labelledby="ai-title"><div class="container"><div class="section-header center dark-header"><h2 id="ai-title">Your team. Your AI agents.<br><span>One workflow.</span></h2><p>Use AI to shape better requirements, then bring external agents into the work — without losing human oversight.</p></div>
+      <div class="ai-grid"><article class="ai-card"><div class="ai-card-heading"><span class="ai-icon"><svg class="icon"><use href="#i-spark"/></svg></span><span>AI TASK ASSISTANT</span></div><h3>Go from rough idea<br>to clear requirements.</h3><p>Improve task descriptions, surface missing details, and get a structured proposal you can review before applying.</p><div class="ai-example"><div class="ai-example-label">ORIGINAL REQUEST</div><p>“Our site needs a better contact form.”</p><div class="ai-example-divider"><svg class="icon"><use href="#i-arrow"/></svg> AI suggestion</div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Define required fields and validation</span></div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Add success and error states</span></div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Confirm mobile accessibility</span></div></div><small class="ai-disclaimer">You review the suggestion. Changes are never silently applied.</small></article>
+      <article class="ai-card"><div class="ai-card-heading"><span class="ai-icon"><svg class="icon"><use href="#i-bot"/></svg></span><span>EXTERNAL AI AGENTS</span></div><h3>Delegate the analysis.<br>Keep the decisions.</h3><p>Connect your own executor, assign it a task, hold private conversations, and choose what to share with your client.</p><div class="agent-example"><div class="agent-top"><span class="agent-avatar"><svg class="icon"><use href="#i-bot"/></svg></span><span><strong>Requirements reviewer</strong><small>Assigned to Contact form</small></span><span class="agent-dot"></span></div><div class="agent-message"><strong>Team instruction</strong><p>Find two ambiguous requirements and propose acceptance criteria.</p></div><div class="agent-result"><span class="agent-result-label"><svg class="icon"><use href="#i-lock"/></svg> PRIVATE AGENT RESULT</span><p>Found two requirements to clarify: spam protection and expected delivery behavior.</p><div><span>Review result</span><svg class="icon"><use href="#i-arrow"/></svg></div></div></div><small class="ai-disclaimer">External execution requires your configured agent/provider.</small></article></div>
+      <div class="ai-bottom"><span><svg class="icon"><use href="#i-shield"/></svg> Scoped access, private results, human-controlled sharing.</span><a href="#features">See what else is included <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    </div></section>
+
+    <section class="section features-section" id="features" aria-labelledby="features-title"><div class="container"><div class="section-header center"><h2 id="features-title">Everything in its place.<br><span class="muted-heading">Nothing in your way.</span></h2><p>Practical tools for the real work of delivering client projects — not another dashboard to maintain.</p></div><div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>Projects & tasks</h3><p>Organize tasks into sections, follow statuses, and keep the entire project history in context.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-users"/></svg></span><h3>Team & permissions</h3><p>Invite developers, manage project access, and keep internal collaboration separate from client communication.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-message"/></svg></span><h3>Discussions & files</h3><p>Keep questions, comments, screenshots, and attachments close to the work they belong to.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Estimates & pricing</h3><p>Track work estimates and project costs with clear boundaries between developer and client data.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></span><h3>PDF & DOCX export</h3><p>Turn selected tasks into polished specifications and estimates, with document language and content controls.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-bell"/></svg></span><h3>Stay in the loop</h3><p>Follow activity through in-app updates and configurable email, push, and Telegram notifications.</p></article>
+    </div></div></section>
+
+    <section class="section branding-section" id="branding" aria-labelledby="branding-title"><div class="container branding-grid"><div class="branding-copy"><h2 id="branding-title">Your studio.<br><span class="muted-heading">Your client experience.</span></h2><p>Give clients a focused place to follow their projects, while your team keeps control of delivery behind the scenes.</p><div class="branding-points"><span><svg class="icon"><use href="#i-check"/></svg> Workspace branding and client-facing documents</span><span><svg class="icon"><use href="#i-check"/></svg> Simple email-based client access</span><span><svg class="icon"><use href="#i-check"/></svg> Mobile-friendly and installable as a PWA</span><span><svg class="icon"><use href="#i-check"/></svg> English, Russian, Turkish, and Simplified Chinese</span></div><div class="language-tags"><span>EN</span><span>RU</span><span>TR</span><span>ZH-CN</span></div></div><div class="branding-showcase"><div class="brand-preview"><div class="brand-preview-top"><span class="preview-logo">a<span>.</span></span><span>Acme Studio</span><span class="preview-account">Client portal</span></div><div class="brand-preview-body"><span class="detail-eyebrow">YOUR PROJECT</span><h3>Website redesign</h3><p>Everything about your project, in one simple place.</p><div class="brand-progress-top"><span>Overall progress</span><strong>67%</strong></div><div class="brand-progress-track"><span></span></div><div class="brand-preview-task"><span class="brand-task-dot done"></span><span>Homepage design</span><span>Done</span></div><div class="brand-preview-task"><span class="brand-task-dot review"></span><span>Contact form</span><span>Review</span></div><div class="brand-preview-task"><span class="brand-task-dot work"></span><span>Mobile menu</span><span>In progress</span></div></div></div><div class="branding-caption"><svg class="icon"><use href="#i-globe"/></svg> A client-friendly workspace with your identity.</div></div></div></section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title"><div class="container"><div class="section-header center"><h2 id="pricing-title">Start small.<br><span class="muted-heading">Grow into what’s next.</span></h2><p>We’re preparing plans for independent developers and growing studios. Public signup and paid billing aren’t live yet.</p></div><div class="pricing-grid"><article class="price-card"><h3>Basic</h3><p>For a first client project.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 1 active project</li><li><svg class="icon"><use href="#i-check"/></svg> 1 developer</li><li><svg class="icon"><use href="#i-check"/></svg> Up to 3 clients</li></ul><span class="plan-coming">Free plan · Planned</span></article><article class="price-card"><h3>Freelancer</h3><p>For a steady pipeline of work.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> Up to 10 active projects</li><li><svg class="icon"><use href="#i-check"/></svg> 1 developer</li><li><svg class="icon"><use href="#i-check"/></svg> Basic workspace branding</li></ul><span class="plan-coming">Paid plan · Planned</span></article><article class="price-card featured-price"><h3>Studio</h3><p>For agencies working together.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> Up to 100 active projects</li><li><svg class="icon"><use href="#i-check"/></svg> 10 developers included</li><li><svg class="icon"><use href="#i-check"/></svg> Advanced branding and integrations</li></ul><span class="plan-coming">Paid plan · Planned</span></article></div><p class="pricing-disclaimer">Plan details are a preview and may change before public launch. We won’t take you to an unfinished checkout.</p></div></section>
+
+    <section class="section close-section" aria-labelledby="close-title"><div class="container"><div class="close-card"><div class="close-orb" aria-hidden="true"></div><h2 id="close-title">Less chasing.<br>More <em>done.</em></h2><p>Give every client request a clear path forward — and every project a better way to finish.</p><div class="button-row"><a class="button button-light button-lg" href="#demo">Explore the demo <svg class="icon"><use href="#i-arrow"/></svg></a><a class="button button-outline-light button-lg" href="https://app.dev2done.web86.site/admin/login">Open the app <svg class="icon"><use href="#i-external"/></svg></a></div></div>
+    <div class="faq" id="faq"><div class="faq-intro"><h2>Frequently asked<br>questions.</h2></div><div class="faq-items"><details><summary>Do clients need to create a developer account?<span class="faq-toggle">+</span></summary><p>No. Clients use a dedicated, email-based project access flow rather than a regular developer account.</p></details><details><summary>Can clients approve work, not just requirements?<span class="faq-toggle">+</span></summary><p>Yes. Approval of the task scope and acceptance of the delivered result are distinct parts of the workflow.</p></details><details><summary>Are AI agents included automatically?<span class="faq-toggle">+</span></summary><p>Dev2Done supports external AI agents through a permission-controlled API. Connecting and running an executor or AI provider requires separate setup.</p></details><details><summary>Can I export a project specification?<span class="faq-toggle">+</span></summary><p>Yes. Export selected project tasks in PDF or DOCX, including optional details and estimates, with support for four document languages.</p></details><details><summary>Is Dev2Done open for public registration?<span class="faq-toggle">+</span></summary><p>Not yet. The product is being prepared for public onboarding. Existing users can still log in through the application.</p></details></div></div></div></section>
+  </main>
+  <dialog class="trial-dialog" id="trial-dialog" aria-labelledby="trial-title" aria-describedby="trial-description">
+    <button class="dialog-close" type="button" data-close-trial aria-label="Close dialog">×</button>
+    <div class="trial-orbit" aria-hidden="true">✦</div>
+    <h2 id="trial-title">Studio trial is coming.</h2>
+    <p id="trial-description">The 7-day Studio trial is planned for our public launch. Registration isn’t available yet — explore the interactive project demo in the meantime.</p>
+    <div class="button-row"><a class="button button-primary" href="#demo" data-close-trial>Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a><button class="button button-secondary" type="button" data-close-trial>Close</button></div>
+  </dialog>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand">
+      <a class="brand" href="/">
+          <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+          <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a><p>Built for developers.<br>Simple for clients.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="#demo">Product demo</a><a href="#workflow">How it works</a><a href="#ai">AI & agents</a><a href="#pricing">Plans</a></div><div><strong>Platform</strong><a href="https://app.dev2done.web86.site/admin/login">Log in</a><a href="https://github.com/web86/project-brief" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#faq">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2026 Dev2Done. All rights reserved.</span><span>From brief to done. <svg class="icon"><use href="#i-arrow"/></svg></span></div></div></footer>
+</body>
+</html>
