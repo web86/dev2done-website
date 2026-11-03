@@ -19,6 +19,12 @@ The switcher keeps `Dev2Done` as the product name and does not translate screens
 
 **To edit text:** edit the corresponding HTML page directly, keeping its identifiers, anchors and shared script references unchanged. New text must be translated in all 4 versions. `assets/js/site.js` contains language detection and interactions; `assets/css/languages.css` styles the switcher.
 
+## Mobile navigation
+
+At widths up to 900px, the menu button opens a fully immersive, scrollable, dark D2D navigation overlay. It includes the brand logo at the top, large section links, login, the four languages and a bottom Explore Demo button. The full-screen panel animates in with a staggered link reveal (disabled for reduced motion). Esc or the top-right close button closes the menu and returns keyboard focus; focus is trapped inside while open, and the page beneath does not scroll.
+
+The desktop header and compact language dropdown are unchanged. All four static language pages include their own translated close/accessible labels. No new JavaScript dependencies or build tools are required.
+
 ## Deployment on Jino
 
 Upload `index.html`, the three language folders (`ru/`, `tr/`, `zh-cn/`) and shared `assets/` into the document root of `dev2done.web86.site`. Uploading only `index.html` will leave language links broken. All three translated directories need directory-index handling (`index.html`).
