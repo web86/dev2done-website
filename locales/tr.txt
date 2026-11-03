@@ -26,6 +26,7 @@ Geliştirici demosunu aç
 Aynı projenin ilerlemesini izleyin ve çalışmaları inceleyin.
 Müşteri demosunu aç
 Tek proje. İki bakış açısı.
+Demo seç
 Çalışma biçiminiz için
 tasarlandı.
 İlk müşteri talebinden son teslimata. Her şey bağlantılı.
