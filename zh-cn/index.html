@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN" data-menu-open-label="打开菜单" data-menu-close-label="关闭菜单">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Dev2Done 帮助开发者和工作室管理客户项目、需求确认、团队协作及 AI 智能体，从最初咨询到最终交付。">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dev2Done — 客户项目，从需求到交付</title>
+  <link rel="canonical" href="https://dev2done.web86.site/zh-cn/">
+  <link rel="alternate" hreflang="en" href="https://dev2done.web86.site/">
+  <link rel="alternate" hreflang="ru" href="https://dev2done.web86.site/ru/">
+  <link rel="alternate" hreflang="tr" href="https://dev2done.web86.site/tr/">
+  <link rel="alternate" hreflang="zh-CN" href="https://dev2done.web86.site/zh-cn/">
+  <link rel="alternate" hreflang="x-default" href="https://dev2done.web86.site/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/site.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/dark.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/ambient-hero.css">
+<style id="d2d-loader-critical">
+html{background:#080d19}
+html.d2d-booting body>:not(#site-loader){visibility:hidden!important}
+#site-loader{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 50%,#182044 0%,#080d19 60%);transition:opacity .38s ease;color:#f8faff}
+html.d2d-booting #site-loader,html.d2d-leaving #site-loader{display:flex}
+html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
+.d2d-loader-emblem{position:relative;font:800 clamp(64px,11vw,104px)/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.045em;background:linear-gradient(115deg,#2bc9ff,#5482ff 43%,#c34df6);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #3475fa36);animation:d2d-breathe 1.6s ease-in-out infinite alternate}
+.d2d-loader-bar{position:absolute;left:10%;right:10%;height:2px;bottom:-22px;background:linear-gradient(90deg,transparent,#4ea9ff 25%,#bb62fb 75%,transparent);transform-origin:left;animation:d2d-progress 1.35s ease-in-out infinite}
+@keyframes d2d-breathe{from{opacity:.72;transform:scale(.985)}to{opacity:1;transform:scale(1.015)}}
+@keyframes d2d-progress{0%{transform:scaleX(.04);opacity:.3}65%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:.25}}
+@media(prefers-reduced-motion:reduce){.d2d-loader-emblem,.d2d-loader-bar{animation:none}}
+</style>
+<script>document.documentElement.classList.add('d2d-booting');(function(){var done=false;function reveal(){if(done)return;done=true;document.documentElement.classList.remove('d2d-booting');document.documentElement.classList.add('d2d-leaving');setTimeout(function(){document.documentElement.classList.remove('d2d-leaving');document.getElementById('site-loader')?.remove()},410)}window.addEventListener('load',reveal,{once:true});window.addEventListener('pageshow',function(e){if(e.persisted)reveal()});setTimeout(reveal,2500)})();</script>
+  <link rel="stylesheet" href="/assets/css/brand-gradient.css">
+  <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
+  <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
+  <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
+  <link rel="stylesheet" href="/assets/css/languages.css?v=1">
+  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/ambient-hero.js" defer></script>
+  <script src="/assets/js/agent-workflow.js" defer></script>
+</head>
+<body>
+  <div id="site-loader" role="status" aria-label="正在加载 Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
+  <!-- Static localized pages share the same CSS and JS assets. -->
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H6l-3 3v-7a8 8 0 1 1 17-4Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6zM14 2v6h5M9 13h7M9 17h7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="4"/><path d="M12 3v4m-3-4h6M8 14h.01M16 14h.01M9 18h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10M12 2c-3 3-4 6-4 10s1 7 4 10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 15l4-5 4 2 4-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="/zh-cn/" aria-label="Dev2Done 首页">
+        
+        <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+        <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="主导航">
+        <a href="#demo">产品</a>
+        <a href="#workflow">工作方式</a>
+        <a href="#ai">AI 与智能体</a>
+        <a href="#features">功能</a>
+        <a href="#pricing">套餐</a>
+        <a class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">登录</a>
+      </nav>
+      <div class="nav-actions">
+        <details class="language-switcher" id="language-switcher">
+          <summary class="language-trigger" aria-label="选择语言">
+            <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span class="language-current">中文</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="language-options" aria-label="Available languages">
+            <a href="/" lang="en" hreflang="en" class="language-option" data-lang-code="en"><span class="language-code">EN</span><span>English</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/ru/" lang="ru" hreflang="ru" class="language-option" data-lang-code="ru"><span class="language-code">RU</span><span>Русский</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/tr/" lang="tr" hreflang="tr" class="language-option" data-lang-code="tr"><span class="language-code">TR</span><span>Türkçe</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/zh-cn/" lang="zh-CN" hreflang="zh-CN" class="language-option" data-lang-code="zh" aria-current="page"><span class="language-code">中文</span><span>简体中文</span><span class="language-selected" aria-hidden="true">✓</span></a>
+          </div>
+        </details>
+        <a class="nav-login" href="https://app.dev2done.web86.site/admin/login">登录 <svg class="icon"><use href="#i-external"/></svg></a>
+        <a class="button button-sm button-primary nav-cta" href="#demo">探索演示 <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-button" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="fx-ambient" aria-hidden="true">
+        <div class="fx-moving-grid"></div>
+        <div class="fx-spot"></div>
+        <div class="fx-ambient-fade"></div>
+      </div>
+      <div class="container hero-centered">
+        <div class="hero-copy">
+          <h1 id="hero-title">客户项目。<br><em>从需求到交付。</em></h1>
+          <p class="hero-lede">管理客户项目、明确需求、与团队协作，并将 AI 智能体融入工作流程——一站式完成。</p>
+          <div class="button-row hero-actions">
+            <button type="button" class="button button-primary button-lg" data-open-trial>开始免费试用 <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-secondary button-lg" href="#demo">探索演示 <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-trial">7 天 Studio 试用 <span aria-hidden="true">·</span> 无需信用卡</p>
+        </div>
+        <div class="hero-visual" aria-label="Dev2Done 项目工作空间预览">
+          <div class="mock-window hero-window screenshot-window">
+            <div class="window-top" aria-hidden="true">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <span class="window-address">Dev2Done / 工作空间</span>
+              <span class="window-ellipsis">•••</span>
+            </div>
+            <img class="hero-screenshot" src="/assets/img/main.webp" alt="展示客户项目及进度的 Dev2Done 开发者工作空间" width="2048" height="1280" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-demo" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-header center"><h2 id="demo-title">为开发者提供强大工具。<br><span class="muted-heading">让客户轻松上手。</span></h2><p>你和客户在同一项目中协作，却无需面对相同的复杂操作。</p></div>
+        <div class="demo-stage screenshot-demo" id="live-demo-stage">
+          <div class="demo-toolbar">
+            <div class="role-tabs" role="tablist" aria-label="比较开发者和客户视图">
+              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer" tabindex="0"><svg class="icon"><use href="#i-code"/></svg> 开发者视图</button>
+              <button type="button" id="tab-client" class="role-tab" role="tab" aria-selected="false" aria-controls="panel-client" data-role="client" tabindex="-1"><svg class="icon"><use href="#i-users"/></svg> 客户视图</button>
+            </div>
+            <a class="demo-chooser" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">打开在线演示 <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="demo-preview-stack">
+            <div id="panel-developer" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-developer" tabindex="0">
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开开发者演示">
+                <img src="/assets/img/dev.webp" alt="Northstar Commerce 开发者视图，包含任务与团队管理" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>管理任务、团队与项目交付。</span>
+                <a href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer">打开开发者演示 <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+            <div id="panel-client" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden>
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开客户演示">
+                <img src="/assets/img/client.webp" alt="Northstar Commerce 客户视图，包含需求、状态与讨论" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>查看同一项目的进度并审核成果。</span>
+                <a href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer">打开客户演示 <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="demo-footer">
+            <span>同一个项目，两种视角。</span>
+            <a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">选择演示 <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-workflow sc-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-header center sc-header"><h2 id="workflow-title">专为你的 <span class="muted-heading">工作方式打造。</span></h2><p>从客户首次提出需求到最终交付，一切紧密衔接。</p></div>
+        <div class="sc-layout"><div class="sc-tabs" role="tablist" aria-label="探索 Dev2Done 功能"><button class="sc-tab is-active" type="button" role="tab" id="sc-tab-0" aria-controls="sc-panel-0" aria-selected="true" tabindex="0" data-capability="0"><span class="sc-num">01</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="sc-tab-text">网站与集成</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-1" aria-controls="sc-panel-1" aria-selected="false" tabindex="-1" data-capability="1"><span class="sc-num">02</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></span><span class="sc-tab-text">客户与 AI 辅助</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-2" aria-controls="sc-panel-2" aria-selected="false" tabindex="-1" data-capability="2"><span class="sc-num">03</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><span class="sc-tab-text">团队协作</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-3" aria-controls="sc-panel-3" aria-selected="false" tabindex="-1" data-capability="3"><span class="sc-num">04</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="sc-tab-text">审批与交付</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-4" aria-controls="sc-panel-4" aria-selected="false" tabindex="-1" data-capability="4"><span class="sc-num">05</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span><span class="sc-tab-text">智能通知</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-5" aria-controls="sc-panel-5" aria-selected="false" tabindex="-1" data-capability="5"><span class="sc-num">06</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="sc-tab-text">安全与权限</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="sc-stage"><article class="sc-panel" role="tabpanel" id="sc-panel-0" aria-labelledby="sc-tab-0" tabindex="0"><div class="sc-panel-head"><span class="sc-step">01 / 06</span><h3>让你的网站与项目互联。</h3><p>通过 API 将自己网站上的客户咨询直接送入 Dev2Done。审核需求、创建项目，并通过 Webhook 连接现有工具。</p></div><div class="sc-visual sc-visual-api" role="img" aria-label="工作室网站表单通过 API 向 Dev2Done 提交项目请求。">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> 你的工作室网站</div><strong>新项目咨询</strong><span class="sc-input">项目 · 网站改版</span><span class="sc-input">邮箱 · client@example.com</span><span class="sc-primary-stub">发送咨询 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Dev2Done 需求</div><strong>新的客户需求</strong><span class="sc-status purple">待审核</span><span class="sc-detail">审核并批准需求</span></div>
+  </div>
+  <div class="sc-connector"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span>REST API</span></div>
+  <div class="sc-completion"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> <strong>项目已创建</strong><span>出站 Webhook 连接其他工具</span></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-1" aria-labelledby="sc-tab-1" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">02 / 06</span><h3>客户操作简单，AI 让沟通更高效。</h3><p>通过安全的邮件链接邀请客户，无需密码。AI 帮助客户将模糊想法整理成清晰任务，并在应用前审核建议。</p></div><div class="sc-visual sc-visual-ai" role="img" aria-label="客户通过免密码邀请填写需求，并查看可审核的 AI 建议。">
+  <div class="sc-banner"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>邮件邀请</strong><span>安全链接，无需密码</span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> 客户想法</div><strong>我们需要一个联系表单。</strong><p>它应该能在手机上使用，并通知我们的团队。</p><span class="sc-status cyan">想法草稿</span></div>
+    <div class="sc-box sc-ai-highlight"><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> AI 建议</div><strong>让需求更清晰</strong><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 明确必填字段</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 添加反垃圾信息保护</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 说明移动端行为</div><span class="sc-primary-stub">审核并应用</span></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-2" aria-labelledby="sc-tab-2" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">03 / 06</span><h3>整个团队，一个工作空间。</h3><p>邀请开发者、分配职责、管理工作，并将团队内部讨论与客户沟通分开。</p></div><div class="sc-visual sc-visual-team" role="img" aria-label="受邀团队成员承担项目工作并进行内部私密讨论。">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> 团队成员</div><div class="sc-member"><b class="sc-avatar blue">ME</b><span><strong>Morgan Ellis</strong><small>工作空间所有者</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar violet">JD</b><span><strong>Jamie Davis</strong><small>开发者</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar teal">AK</b><span><strong>Alex Kim</strong><small>项目开发者</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div></div>
+    <div class="sc-column"><div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> 已分配任务</div><strong>首页设计</strong><span class="sc-status purple">进行中</span><span class="sc-detail">分配给 Jamie Davis</span></div><div class="sc-private"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>团队私密讨论</strong><small>“先检查移动端布局吧。”</small></span></div></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-3" aria-labelledby="sc-tab-3" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">04 / 06</span><h3>达成共识，开发，交付。</h3><p>让客户批准需求、审核已完成的工作，并导出带有品牌标识的 PDF 或 DOCX 技术规范和报价。</p></div><div class="sc-visual sc-visual-delivery" role="img" aria-label="需求经批准、客户审核并验收成果，可导出品牌化 PDF 或 DOCX 文档。">
+  <div class="sc-milestones"><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>需求范围已批准</strong><span>需求已确认</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><strong>客户审核</strong><span>等待客户检查</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>已验收</strong><span>交付已确认</span></div></div>
+  <div class="sc-doc"><div class="sc-page"><b></b><i></i><i></i><i></i><i></i></div><div class="sc-doc-content"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span><strong>项目技术规范</strong><small>品牌化文档和报价</small></span><div class="sc-formats"><b>PDF</b><b>DOCX</b></div></div></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-4" aria-labelledby="sc-tab-4" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">05 / 06</span><h3>随时掌握进展。</h3><p>通过应用内消息、浏览器推送、Telegram 和邮件，让团队及客户及时了解项目动态。</p></div><div class="sc-visual sc-visual-notifications" role="img" aria-label="客户批准任务可触发应用内、推送、Telegram 和邮件通知。">
+  <div class="sc-event"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>客户已批准一项任务</strong><small>Northstar Commerce · 项目更新</small></span></div><div class="sc-branch"></div>
+  <div class="sc-channel-grid"><div><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><strong>应用内</strong><small>活动记录</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><strong>Web Push</strong><small>浏览器</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>Telegram</strong><small>消息</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><strong>电子邮件</strong><small>更新</small></div></div>
+  <p class="sc-note">选择你关心的事件和通知渠道。</p>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-5" aria-labelledby="sc-tab-5" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">06 / 06</span><h3>控制权始终在你手中。</h3><p>通过 Passkeys、TOTP、角色权限、私有文件和限定权限的 API 访问保护工作空间。</p></div><div class="sc-visual sc-visual-security" role="img" aria-label="Passkeys、双重身份验证、私有文件和角色权限共同保护项目。">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> 账户安全</div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Passkeys</strong><small>安全登录</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>双重身份验证</strong><small>TOTP</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> 受保护的文件和限定权限的 API</div></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> 项目访问权限</div><div class="sc-permission"><strong>所有者</strong><span>工作空间管理</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>开发者</strong><span>已分配的项目</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>客户</strong><span>客户专属视图</span><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> 团队内部数据保持私密</div></div>
+  </div>
+</div></article></div></div>
+      </div>
+    </section>
+
+    <section class="section ai-section agent-workflow-section" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-header center dark-header agent-workflow-heading">
+          <h2 id="ai-title">你的团队，你的 AI 智能体。<br><span>同一工作流程。</span></h2>
+          <p>将任务分配给开发者和 AI 智能体，在同一空间协作，并掌控每一份成果。</p>
+        </div>
+        <div class="agent-workflow-layout">
+          <div class="agent-workflow-copy">
+            <h3>一起工作。<br><span>借助 AI。</span></h3>
+            <p>利用外部 AI 智能体拓展团队能力，重要决定始终由人来做。</p>
+            <div class="agent-workflow-benefits">
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+                <div><strong>团队的一员</strong><p>像分配开发者一样，将智能体分配到项目和任务。</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+                <div><strong>私密协作</strong><p>提供指令、追问细节，并审核智能体报告。</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <div><strong>决定由你做出</strong><p>管理访问权限、审核结果，并决定向客户展示什么。</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="agent-workflow-console" aria-label="开发者与外部 AI 智能体的工作流程示例">
+            <div class="agent-demo-bar">
+              <div class="agent-demo-crumb"><span>Northstar Commerce</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>联系表单</strong></div>
+              <span class="agent-demo-status">进行中</span>
+            </div>
+            <div class="agent-demo-intro">
+              <h3>联系表单</h3>
+              <p>需求审核与交付规划</p>
+            </div>
+            <div class="agent-demo-collaborators">
+              <div class="agent-demo-label">已分配协作者</div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar human">JD</div>
+                <div class="agent-demo-person"><strong>Jamie Davis</strong><span>开发者</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar agent"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></div>
+                <div class="agent-demo-person"><strong>需求审核员</strong><span>外部 AI 智能体</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+            </div>
+            <div class="agent-demo-instruction">
+              <span class="agent-demo-instruction-label"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> 团队指令</span>
+              <p>审核联系表单的需求，找出不明确之处并提出验收标准。</p>
+            </div>
+            <div class="agent-demo-report">
+              <div class="agent-demo-report-heading"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <strong>智能体私密报告</strong><span>仅团队可见</span></div>
+              <p>以下两项需求需要澄清：</p>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 反垃圾信息保护和验证</div>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 提交后的行为与错误处理</div>
+              <div class="agent-demo-followup"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> 请智能体进一步完善 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+            </div>
+            <div class="agent-demo-review">
+              <div class="agent-demo-review-copy"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>人工审核</strong><small>分享哪些内容，由你决定</small></span></div>
+              <span class="agent-demo-share">分享给客户 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="agent-assistant-strip">
+          <div class="agent-assistant-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <div><strong>在工作开始前，AI 就能提供帮助。</strong><p>把客户的初步想法整理成清晰需求；应用前逐条审核 AI 建议。</p></div>
+        </div>
+        <p class="agent-workflow-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> 外部 AI 智能体需要单独配置执行程序或服务提供商。访问权限与客户分享仍由你的团队掌控。</p>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features" aria-labelledby="features-title"><div class="container"><div class="section-header center"><h2 id="features-title">各就各位。<br><span class="muted-heading">没有多余干扰。</span></h2><p>真正帮助你交付客户项目的实用工具，而不是又一个需要维护的仪表盘。</p></div><div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>项目与任务</h3><p>按模块组织任务、跟踪状态，并保留完整的项目历史。</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-users"/></svg></span><h3>团队与权限</h3><p>邀请开发者、管理项目访问权限，并将内部协作与客户沟通分开。</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-message"/></svg></span><h3>讨论与文件</h3><p>让问题、评论、截图及附件始终与相关任务保持关联。</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></span><h3>工时估算与报价</h3><p>跟踪预估工时和项目成本，并清晰区分开发者与客户可见的信息。</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></span><h3>PDF 与 DOCX 导出</h3><p>根据选定任务生成专业的技术规范和报价，可选择文档语言与内容。</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-bell"/></svg></span><h3>时刻掌握动态</h3><p>通过应用内动态及可配置的邮件、推送和 Telegram 通知了解进度。</p></article>
+    </div></div></section>
+
+    <section class="section branding-section" id="branding" aria-labelledby="branding-title">
+        <div class="container branding-grid">
+            <div class="branding-copy"><h2 id="branding-title">你的工作室。<br><span class="muted-heading">客户眼中的你的品牌。</span></h2><p>从项目工作空间、邀请邮件到专业文档，让每次客户互动都体现你的工作室品牌。</p><div class="branding-points"><span><svg class="icon"><use href="#i-check"/></svg> 带有 Logo 的工作空间和客户文档</span><span><svg class="icon"><use href="#i-check"/></svg> 无需注册，通过邮件轻松访问项目</span><span><svg class="icon"><use href="#i-check"/></svg> 连接自定义域名和企业邮箱</span><span><svg class="icon"><use href="#i-check"/></svg> 英语、俄语、土耳其语和简体中文</span></div><div class="language-tags"><span>EN</span><span>RU</span><span>TR</span><span>ZH-CN</span><span>更多语言即将推出</span></div>
+            </div>
+        <div class="branding-showcase">
+            <div class="brand-preview1"><img alt="品牌定制示例" src="/assets/img/brending.webp" style="width: 100%;"></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title"><div class="container"><div class="section-header center"><h2 id="pricing-title">从小规模开始。<br><span class="muted-heading">随业务一起成长。</span></h2><p>我们正在为独立开发者和工作室准备套餐。目前尚未开放公开注册和付费订阅。</p></div><div class="pricing-grid"><article class="price-card"><h3>基础版</h3><p>适合第一个客户项目。</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 1 个活跃项目</li><li><svg class="icon"><use href="#i-check"/></svg> 1 名开发者</li><li><svg class="icon"><use href="#i-check"/></svg> 最多 3 名客户</li></ul><span class="plan-coming">免费套餐 · 规划中</span></article><article class="price-card"><h3>自由职业者版</h3><p>适合稳定接单的开发者。</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 最多 10 个活跃项目</li><li><svg class="icon"><use href="#i-check"/></svg> 1 名开发者</li><li><svg class="icon"><use href="#i-check"/></svg> 基础工作空间品牌化</li></ul><span class="plan-coming">付费套餐 · 规划中</span></article><article class="price-card featured-price"><h3>工作室版</h3><p>适合协作中的团队。</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 最多 100 个活跃项目</li><li><svg class="icon"><use href="#i-check"/></svg> 包含 10 名开发者</li><li><svg class="icon"><use href="#i-check"/></svg> 高级品牌定制与集成</li></ul><span class="plan-coming">付费套餐 · 规划中</span></article></div><p class="pricing-disclaimer">套餐详情为预览内容，正式发布前可能调整。我们不会将你导向尚未完成的付款页面。</p></div></section>
+
+    <section class="section close-section" aria-labelledby="close-title"><div class="container"><div class="close-card"><div class="close-orb" aria-hidden="true"></div><h2 id="close-title">少一些反复沟通。<br>多一些 <em>已完成的项目。</em></h2><p>让每个客户需求都有清晰的推进路径，让每个项目都能顺利交付。</p><div class="button-row"><a class="button button-light button-lg" href="#demo">探索演示 <svg class="icon"><use href="#i-arrow"/></svg></a><a class="button button-outline-light button-lg" href="https://app.dev2done.web86.site/admin/login">打开应用 <svg class="icon"><use href="#i-external"/></svg></a></div></div>
+    <div class="faq" id="faq"><div class="faq-intro"><h2>常见<br>问题。</h2></div><div class="faq-items"><details><summary>客户需要注册开发者账户吗？<span class="faq-toggle">+</span></summary><p>不需要。客户通过专属邮件链接访问项目，无需普通开发者账户。</p></details><details><summary>客户不仅能批准需求，还能验收完成的工作吗？<span class="faq-toggle">+</span></summary><p>可以。任务范围的确认与最终交付成果的验收是两个独立步骤。</p></details><details><summary>AI 智能体会自动提供吗？<span class="faq-toggle">+</span></summary><p>Dev2Done 通过带权限控制的 API 支持外部 AI 智能体。需要另行配置执行程序或 AI 服务商。</p></details><details><summary>我可以导出项目技术规范吗？<span class="faq-toggle">+</span></summary><p>可以。选择项目任务，按需包含细节和估算，并以四种文档语言之一导出为 PDF 或 DOCX。</p></details><details><summary>Dev2Done 已开放公开注册了吗？<span class="faq-toggle">+</span></summary><p>还没有。我们正在准备公开注册。现有用户仍可登录应用。</p></details></div></div></div></section>
+  </main>
+  <dialog class="trial-dialog" id="trial-dialog" aria-labelledby="trial-title" aria-describedby="trial-description">
+    <button class="dialog-close" type="button" data-close-trial aria-label="关闭对话框">×</button>
+    <div class="trial-orbit" aria-hidden="true">✦</div>
+    <h2 id="trial-title">Studio 试用即将推出。</h2>
+    <p id="trial-description">7 天 Studio 试用计划随公开发布推出。目前尚无法注册；你可以先体验交互式项目演示。</p>
+    <div class="button-row"><a class="button button-primary" href="#demo" data-close-trial>探索演示 <svg class="icon"><use href="#i-arrow"/></svg></a><button class="button button-secondary" type="button" data-close-trial>关闭</button></div>
+  </dialog>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand">
+      <a class="brand" href="/zh-cn/">
+          <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+          <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a><p>为开发者打造。<br>让客户轻松使用。</p></div><div class="footer-links"><div><strong>探索</strong><a href="#demo">产品演示</a><a href="#workflow">工作方式</a><a href="#ai">AI 与智能体</a><a href="#pricing">套餐</a></div><div><strong>平台</strong><a href="https://app.dev2done.web86.site/admin/login">登录</a><a href="https://github.com/web86/project-brief" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#faq">常见问题</a></div></div></div><div class="footer-bottom"><span>© 2026 Dev2Done. 保留所有权利。</span><span>从需求到交付。 <svg class="icon"><use href="#i-arrow"/></svg></span></div></div></footer>
+</body>
+</html>

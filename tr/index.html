@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="tr" data-menu-open-label="Menüyü aç" data-menu-close-label="Menüyü kapat">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Dev2Done ile müşteri projelerini ilk talepten teslimata kadar yönetin: görevler, onaylar, ekibiniz ve AI ajanları tek yerde.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dev2Done — Müşteri projeleri, fikirden teslimata</title>
+  <link rel="canonical" href="https://dev2done.web86.site/tr/">
+  <link rel="alternate" hreflang="en" href="https://dev2done.web86.site/">
+  <link rel="alternate" hreflang="ru" href="https://dev2done.web86.site/ru/">
+  <link rel="alternate" hreflang="tr" href="https://dev2done.web86.site/tr/">
+  <link rel="alternate" hreflang="zh-CN" href="https://dev2done.web86.site/zh-cn/">
+  <link rel="alternate" hreflang="x-default" href="https://dev2done.web86.site/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/site.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/dark.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/ambient-hero.css">
+<style id="d2d-loader-critical">
+html{background:#080d19}
+html.d2d-booting body>:not(#site-loader){visibility:hidden!important}
+#site-loader{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 50%,#182044 0%,#080d19 60%);transition:opacity .38s ease;color:#f8faff}
+html.d2d-booting #site-loader,html.d2d-leaving #site-loader{display:flex}
+html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
+.d2d-loader-emblem{position:relative;font:800 clamp(64px,11vw,104px)/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.045em;background:linear-gradient(115deg,#2bc9ff,#5482ff 43%,#c34df6);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #3475fa36);animation:d2d-breathe 1.6s ease-in-out infinite alternate}
+.d2d-loader-bar{position:absolute;left:10%;right:10%;height:2px;bottom:-22px;background:linear-gradient(90deg,transparent,#4ea9ff 25%,#bb62fb 75%,transparent);transform-origin:left;animation:d2d-progress 1.35s ease-in-out infinite}
+@keyframes d2d-breathe{from{opacity:.72;transform:scale(.985)}to{opacity:1;transform:scale(1.015)}}
+@keyframes d2d-progress{0%{transform:scaleX(.04);opacity:.3}65%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:.25}}
+@media(prefers-reduced-motion:reduce){.d2d-loader-emblem,.d2d-loader-bar{animation:none}}
+</style>
+<script>document.documentElement.classList.add('d2d-booting');(function(){var done=false;function reveal(){if(done)return;done=true;document.documentElement.classList.remove('d2d-booting');document.documentElement.classList.add('d2d-leaving');setTimeout(function(){document.documentElement.classList.remove('d2d-leaving');document.getElementById('site-loader')?.remove()},410)}window.addEventListener('load',reveal,{once:true});window.addEventListener('pageshow',function(e){if(e.persisted)reveal()});setTimeout(reveal,2500)})();</script>
+  <link rel="stylesheet" href="/assets/css/brand-gradient.css">
+  <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
+  <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
+  <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
+  <link rel="stylesheet" href="/assets/css/languages.css?v=1">
+  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/ambient-hero.js" defer></script>
+  <script src="/assets/js/agent-workflow.js" defer></script>
+</head>
+<body>
+  <div id="site-loader" role="status" aria-label="Dev2Done yükleniyor"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
+  <!-- Static localized pages share the same CSS and JS assets. -->
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H6l-3 3v-7a8 8 0 1 1 17-4Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6zM14 2v6h5M9 13h7M9 17h7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="4"/><path d="M12 3v4m-3-4h6M8 14h.01M16 14h.01M9 18h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10M12 2c-3 3-4 6-4 10s1 7 4 10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 15l4-5 4 2 4-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="/tr/" aria-label="Dev2Done ana sayfa">
+        
+        <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+        <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Ana gezinme">
+        <a href="#demo">Ürün</a>
+        <a href="#workflow">Nasıl çalışır?</a>
+        <a href="#ai">AI ve ajanlar</a>
+        <a href="#features">Özellikler</a>
+        <a href="#pricing">Paketler</a>
+        <a class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">Giriş yap</a>
+      </nav>
+      <div class="nav-actions">
+        <details class="language-switcher" id="language-switcher">
+          <summary class="language-trigger" aria-label="Dil seç">
+            <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span class="language-current">TR</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="language-options" aria-label="Available languages">
+            <a href="/" lang="en" hreflang="en" class="language-option" data-lang-code="en"><span class="language-code">EN</span><span>English</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/ru/" lang="ru" hreflang="ru" class="language-option" data-lang-code="ru"><span class="language-code">RU</span><span>Русский</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/tr/" lang="tr" hreflang="tr" class="language-option" data-lang-code="tr" aria-current="page"><span class="language-code">TR</span><span>Türkçe</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/zh-cn/" lang="zh-CN" hreflang="zh-CN" class="language-option" data-lang-code="zh"><span class="language-code">中文</span><span>简体中文</span><span class="language-selected" aria-hidden="true">✓</span></a>
+          </div>
+        </details>
+        <a class="nav-login" href="https://app.dev2done.web86.site/admin/login">Giriş yap <svg class="icon"><use href="#i-external"/></svg></a>
+        <a class="button button-sm button-primary nav-cta" href="#demo">Demoyu keşfet <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="fx-ambient" aria-hidden="true">
+        <div class="fx-moving-grid"></div>
+        <div class="fx-spot"></div>
+        <div class="fx-ambient-fade"></div>
+      </div>
+      <div class="container hero-centered">
+        <div class="hero-copy">
+          <h1 id="hero-title">Müşteri projeleri.<br><em>Fikirden sonuca.</em></h1>
+          <p class="hero-lede">Müşteri projelerini yönetin, gereksinimleri netleştirin, ekibinizle iş birliği yapın ve AI ajanlarını sürece dahil edin — hepsi tek yerde.</p>
+          <div class="button-row hero-actions">
+            <button type="button" class="button button-primary button-lg" data-open-trial>Ücretsiz denemeyi başlat <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-secondary button-lg" href="#demo">Demoyu keşfet <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-trial">7 günlük Studio denemesi <span aria-hidden="true">·</span> Kredi kartı gerekmez</p>
+        </div>
+        <div class="hero-visual" aria-label="Dev2Done proje çalışma alanı ön izlemesi">
+          <div class="mock-window hero-window screenshot-window">
+            <div class="window-top" aria-hidden="true">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <span class="window-address">Dev2Done / Çalışma alanı</span>
+              <span class="window-ellipsis">•••</span>
+            </div>
+            <img class="hero-screenshot" src="/assets/img/main.webp" alt="Müşteri projelerini ve ilerlemelerini gösteren Dev2Done çalışma alanı" width="2048" height="1280" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-demo" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-header center"><h2 id="demo-title">Sizin için güçlü.<br><span class="muted-heading">Müşteriler için kolay.</span></h2><p>Siz ve müşteriniz aynı projede çalışırsınız; ikiniz de yalnızca ihtiyacınız olan ayrıntıları görürsünüz.</p></div>
+        <div class="demo-stage screenshot-demo" id="live-demo-stage">
+          <div class="demo-toolbar">
+            <div class="role-tabs" role="tablist" aria-label="Geliştirici ve müşteri görünümlerini karşılaştır">
+              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer" tabindex="0"><svg class="icon"><use href="#i-code"/></svg> Geliştirici görünümü</button>
+              <button type="button" id="tab-client" class="role-tab" role="tab" aria-selected="false" aria-controls="panel-client" data-role="client" tabindex="-1"><svg class="icon"><use href="#i-users"/></svg> Müşteri görünümü</button>
+            </div>
+            <a class="demo-chooser" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Canlı demoyu aç <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="demo-preview-stack">
+            <div id="panel-developer" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-developer" tabindex="0">
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer" aria-label="Geliştirici demosunu yeni sekmede aç">
+                <img src="/assets/img/dev.webp" alt="Görevler ve ekip yönetimiyle Northstar Commerce geliştirici görünümü" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Görevleri, ekibi ve proje teslimini yönetin.</span>
+                <a href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer">Geliştirici demosunu aç <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+            <div id="panel-client" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden>
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer" aria-label="Müşteri demosunu yeni sekmede aç">
+                <img src="/assets/img/client.webp" alt="Fikirler, durumlar ve görüşmelerle Northstar Commerce müşteri görünümü" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Aynı projenin ilerlemesini izleyin ve çalışmaları inceleyin.</span>
+                <a href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer">Müşteri demosunu aç <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="demo-footer">
+            <span>Tek proje. İki bakış açısı.</span>
+            <a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Demo seç <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-workflow sc-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-header center sc-header"><h2 id="workflow-title">Çalışma biçiminiz için <span class="muted-heading">tasarlandı.</span></h2><p>İlk müşteri talebinden son teslimata. Her şey bağlantılı.</p></div>
+        <div class="sc-layout"><div class="sc-tabs" role="tablist" aria-label="Dev2Done özelliklerini keşfet"><button class="sc-tab is-active" type="button" role="tab" id="sc-tab-0" aria-controls="sc-panel-0" aria-selected="true" tabindex="0" data-capability="0"><span class="sc-num">01</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="sc-tab-text">Web sitesi ve entegrasyonlar</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-1" aria-controls="sc-panel-1" aria-selected="false" tabindex="-1" data-capability="1"><span class="sc-num">02</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></span><span class="sc-tab-text">Müşteriler ve AI desteği</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-2" aria-controls="sc-panel-2" aria-selected="false" tabindex="-1" data-capability="2"><span class="sc-num">03</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><span class="sc-tab-text">Ekip çalışması</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-3" aria-controls="sc-panel-3" aria-selected="false" tabindex="-1" data-capability="3"><span class="sc-num">04</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="sc-tab-text">Onay ve teslimat</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-4" aria-controls="sc-panel-4" aria-selected="false" tabindex="-1" data-capability="4"><span class="sc-num">05</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span><span class="sc-tab-text">Akıllı bildirimler</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-5" aria-controls="sc-panel-5" aria-selected="false" tabindex="-1" data-capability="5"><span class="sc-num">06</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="sc-tab-text">Güvenlik ve kontrol</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="sc-stage"><article class="sc-panel" role="tabpanel" id="sc-panel-0" aria-labelledby="sc-tab-0" tabindex="0"><div class="sc-panel-head"><span class="sc-step">01 / 06</span><h3>Web siteniz. Projelerinizle bağlantılı.</h3><p>Kendi web sitenizden gelen talepleri API ile Dev2Done'a aktarın. Başvuruları inceleyin, projeler oluşturun ve webhook'larla mevcut araçlarınızı bağlayın.</p></div><div class="sc-visual sc-visual-api" role="img" aria-label="Stüdyo formu, API ile Dev2Done'a proje talebi gönderir.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Stüdyonuzun web sitesi</div><strong>Yeni proje talebi</strong><span class="sc-input">Proje · Web sitesi yenileme</span><span class="sc-input">E-posta · client@example.com</span><span class="sc-primary-stub">Talebi gönder <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Dev2Done talepleri</div><strong>Yeni müşteri talebi</strong><span class="sc-status purple">İnceleme bekliyor</span><span class="sc-detail">Talebi incele ve onayla</span></div>
+  </div>
+  <div class="sc-connector"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span>REST API</span></div>
+  <div class="sc-completion"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> <strong>Proje oluşturuldu</strong><span>Giden webhook'lar diğer araçları bağlar</span></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-1" aria-labelledby="sc-tab-1" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">02 / 06</span><h3>Müşteriler için kolay. AI ile daha akıllı.</h3><p>Müşterileri güvenli e-posta bağlantısıyla davet edin; parola gerekmez. AI önerileriyle belirsiz fikirleri, müşterinin inceleyebileceği açık görevlere dönüştürün.</p></div><div class="sc-visual sc-visual-ai" role="img" aria-label="Parolasız davet, fikir formu ve incelenebilir AI önerisine yönlendirir.">
+  <div class="sc-banner"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>E-posta daveti</strong><span>Güvenli bağlantı, parola yok</span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Müşteri fikri</div><strong>Bir iletişim formuna ihtiyacımız var.</strong><p>Telefonlarda çalışmalı ve ekibimizi bilgilendirmeli.</p><span class="sc-status cyan">Fikir taslağı</span></div>
+    <div class="sc-box sc-ai-highlight"><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> AI önerisi</div><strong>Daha açık hale getir</strong><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Zorunlu alanları belirle</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Spam koruması ekle</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Mobil davranışı tanımla</div><span class="sc-primary-stub">İncele ve uygula</span></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-2" aria-labelledby="sc-tab-2" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">03 / 06</span><h3>Tüm ekibiniz. Tek çalışma alanı.</h3><p>Geliştiricileri davet edin, sorumlulukları dağıtın, işleri yönetin ve ekip içi konuşmaları müşteri iletişiminden ayrı tutun.</p></div><div class="sc-visual sc-visual-team" role="img" aria-label="Davetli ekip üyeleri görevleri ve özel görüşmeleri paylaşır.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Ekip üyeleri</div><div class="sc-member"><b class="sc-avatar blue">ME</b><span><strong>Morgan Ellis</strong><small>Çalışma alanı sahibi</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar violet">JD</b><span><strong>Jamie Davis</strong><small>Geliştirici</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar teal">AK</b><span><strong>Alex Kim</strong><small>Proje geliştiricisi</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div></div>
+    <div class="sc-column"><div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Atanan görev</div><strong>Ana sayfa tasarımı</strong><span class="sc-status purple">Devam ediyor</span><span class="sc-detail">Jamie Davis'e atandı</span></div><div class="sc-private"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Özel ekip görüşmesi</strong><small>“Önce mobil düzeni inceleyelim.”</small></span></div></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-3" aria-labelledby="sc-tab-3" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">04 / 06</span><h3>Anlaşın. Geliştirin. Teslim edin.</h3><p>Gereksinimleri onaylatın, tamamlanan işi müşteriye inceletin ve PDF veya DOCX biçiminde markalı teknik şartname ve teklifler oluşturun.</p></div><div class="sc-visual sc-visual-delivery" role="img" aria-label="Gereksinimler onaylanır, müşteri işi inceler ve PDF veya DOCX belgeler hazırlanır.">
+  <div class="sc-milestones"><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>Kapsam onaylandı</strong><span>Gereksinimler kararlaştırıldı</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><strong>Müşteri incelemesi</strong><span>İş incelemeye hazır</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>Kabul edildi</strong><span>Teslimat onaylandı</span></div></div>
+  <div class="sc-doc"><div class="sc-page"><b></b><i></i><i></i><i></i><i></i></div><div class="sc-doc-content"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span><strong>Teknik şartname</strong><small>Markalı belgeler ve teklifler</small></span><div class="sc-formats"><b>PDF</b><b>DOCX</b></div></div></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-4" aria-labelledby="sc-tab-4" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">05 / 06</span><h3>Her zaman haberdar olun.</h3><p>Ekibinizi ve müşterilerinizi uygulama içinden, tarayıcı Push bildirimleriyle, Telegram ve e-postayla bilgilendirin.</p></div><div class="sc-visual sc-visual-notifications" role="img" aria-label="Müşterinin onayı uygulama içi, Push, Telegram ve e-posta bildirimleri gönderebilir.">
+  <div class="sc-event"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Müşteri bir görevi onayladı</strong><small>Northstar Commerce · Proje güncellemesi</small></span></div><div class="sc-branch"></div>
+  <div class="sc-channel-grid"><div><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><strong>Uygulama içi</strong><small>Etkinlikler</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><strong>Web Push</strong><small>Tarayıcı</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>Telegram</strong><small>Mesajlar</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><strong>E-posta</strong><small>Güncellemeler</small></div></div>
+  <p class="sc-note">Sizin için önemli olayları ve kanalları seçin.</p>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-5" aria-labelledby="sc-tab-5" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">06 / 06</span><h3>Kontrol sizde kalsın.</h3><p>Passkeys, TOTP, rol tabanlı izinler, özel dosyalar ve kapsamı sınırlandırılmış API erişimiyle çalışma alanınızı koruyun.</p></div><div class="sc-visual sc-visual-security" role="img" aria-label="Passkeys, iki faktörlü doğrulama, özel dosyalar ve roller projeleri korur.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Hesap güvenliği</div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Passkeys</strong><small>Güvenli giriş</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>İki faktörlü kimlik doğrulama</strong><small>TOTP</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Korunan dosyalar ve sınırlı API erişimi</div></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Proje erişimi</div><div class="sc-permission"><strong>Sahip</strong><span>Çalışma alanı yönetimi</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>Geliştirici</strong><span>Atanmış projeler</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>Müşteri</strong><span>Müşteriye özel görünüm</span><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Ekip verileri gizli kalır</div></div>
+  </div>
+</div></article></div></div>
+      </div>
+    </section>
+
+    <section class="section ai-section agent-workflow-section" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-header center dark-header agent-workflow-heading">
+          <h2 id="ai-title">Ekibiniz. AI ajanlarınız.<br><span>Tek iş akışı.</span></h2>
+          <p>Geliştiricilere ve AI ajanlarına görev atayın, tek çalışma alanında iş birliği yapın ve her sonucu kontrol edin.</p>
+        </div>
+        <div class="agent-workflow-layout">
+          <div class="agent-workflow-copy">
+            <h3>Birlikte çalışın.<br><span>AI ile.</span></h3>
+            <p>Kararlar insanlarda kalırken harici AI ajanlarıyla ekibinizin kapasitesini artırın.</p>
+            <div class="agent-workflow-benefits">
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+                <div><strong>Ekibinizin bir parçası</strong><p>Ajanları geliştiricilerinizle birlikte projelere ve görevlere atayın.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+                <div><strong>Özel olarak iş birliği yapın</strong><p>Talimat verin, ek sorular sorun ve ajan raporlarını inceleyin.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <div><strong>Kararları siz verirsiniz</strong><p>Erişimi yönetin, sonuçları inceleyin ve müşterilerin neyi göreceğini belirleyin.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="agent-workflow-console" aria-label="Geliştirici ve harici AI ajanının örnek iş akışı">
+            <div class="agent-demo-bar">
+              <div class="agent-demo-crumb"><span>Northstar Commerce</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>İletişim formu</strong></div>
+              <span class="agent-demo-status">Devam ediyor</span>
+            </div>
+            <div class="agent-demo-intro">
+              <h3>İletişim formu</h3>
+              <p>Gereksinim incelemesi ve teslimat planlaması</p>
+            </div>
+            <div class="agent-demo-collaborators">
+              <div class="agent-demo-label">Atanan katılımcılar</div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar human">JD</div>
+                <div class="agent-demo-person"><strong>Jamie Davis</strong><span>Geliştirici</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar agent"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></div>
+                <div class="agent-demo-person"><strong>Gereksinim inceleyicisi</strong><span>Harici AI ajanı</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+            </div>
+            <div class="agent-demo-instruction">
+              <span class="agent-demo-instruction-label"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Ekip talimatı</span>
+              <p>İletişim formunun gereksinimlerini incele. Belirsizlikleri bul ve kabul ölçütleri öner.</p>
+            </div>
+            <div class="agent-demo-report">
+              <div class="agent-demo-report-heading"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <strong>Özel ajan raporu</strong><span>Yalnızca ekip</span></div>
+              <p>İki gereksinimin netleştirilmesi gerekiyor:</p>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Spam koruması ve doğrulama</div>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Gönderim davranışı ve hata yönetimi</div>
+              <div class="agent-demo-followup"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Ajandan ayrıntılandırmasını iste <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+            </div>
+            <div class="agent-demo-review">
+              <div class="agent-demo-review-copy"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>İnsan incelemesi</strong><small>Nelerin paylaşılacağına yalnızca siz karar verirsiniz</small></span></div>
+              <span class="agent-demo-share">Müşteriyle paylaş <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="agent-assistant-strip">
+          <div class="agent-assistant-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <div><strong>AI, işe başlamadan önce de yardımcı olur.</strong><p>Belirsiz müşteri fikirlerini açık gereksinimlere dönüştürün; her öneriyi uygulamadan önce inceleyin.</p></div>
+        </div>
+        <p class="agent-workflow-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Harici AI ajanları için yapılandırılmış bir yürütücü veya sağlayıcı gerekir. Erişim ve müşteriyle paylaşım ekibinizin kontrolündedir.</p>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features" aria-labelledby="features-title"><div class="container"><div class="section-header center"><h2 id="features-title">Her şey yerli yerinde.<br><span class="muted-heading">Hiçbir şey yolunuzda değil.</span></h2><p>Sırf yönetmek için yeni bir panel değil; müşteri projelerini gerçekten teslim etmenize yardımcı olan araçlar.</p></div><div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>Projeler ve görevler</h3><p>Görevleri bölümlere ayırın, durumları izleyin ve proje geçmişini bağlamıyla birlikte saklayın.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-users"/></svg></span><h3>Ekip ve izinler</h3><p>Geliştiricileri davet edin, proje erişimini yönetin ve ekip içi çalışmayı müşteri iletişiminden ayrı tutun.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-message"/></svg></span><h3>Görüşmeler ve dosyalar</h3><p>Soruları, yorumları, ekran görüntülerini ve ekleri ilgili işin yanında tutun.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Tahminler ve fiyatlandırma</h3><p>Geliştiriciye ve müşteriye ait verileri ayrı tutarak iş tahminlerini ve proje maliyetlerini takip edin.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></span><h3>PDF ve DOCX dışa aktarma</h3><p>Seçili görevlerden, içerik ve belge dili ayarlanabilen profesyonel şartname ve teklifler hazırlayın.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-bell"/></svg></span><h3>Gelişmeleri kaçırmayın</h3><p>Uygulama içi etkinlikleri ve ayarlanabilir e-posta, Push ve Telegram bildirimlerini takip edin.</p></article>
+    </div></div></section>
+
+    <section class="section branding-section" id="branding" aria-labelledby="branding-title">
+        <div class="container branding-grid">
+            <div class="branding-copy"><h2 id="branding-title">Sizin stüdyonuz.<br><span class="muted-heading">Müşterinizin deneyimi.</span></h2><p>Proje alanından davet e-postalarına ve profesyonel belgelere kadar her müşteri temasında stüdyonuzun kimliğini yansıtın.</p><div class="branding-points"><span><svg class="icon"><use href="#i-check"/></svg> Logolu çalışma alanı ve müşteriye sunulan belgeler</span><span><svg class="icon"><use href="#i-check"/></svg> Kayıt olmadan e-posta üzerinden kolay müşteri erişimi</span><span><svg class="icon"><use href="#i-check"/></svg> Özel alan adı ve kurumsal e-posta bağlantısı</span><span><svg class="icon"><use href="#i-check"/></svg> İngilizce, Rusça, Türkçe ve Basitleştirilmiş Çince</span></div><div class="language-tags"><span>EN</span><span>RU</span><span>TR</span><span>ZH-CN</span><span>Yakında daha fazlası</span></div>
+            </div>
+        <div class="branding-showcase">
+            <div class="brand-preview1"><img alt="Markalama örnekleri" src="/assets/img/brending.webp" style="width: 100%;"></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title"><div class="container"><div class="section-header center"><h2 id="pricing-title">Küçük başlayın.<br><span class="muted-heading">İşinizle birlikte büyüyün.</span></h2><p>Bağımsız geliştiriciler ve büyüyen stüdyolar için paketler hazırlıyoruz. Herkese açık kayıt ve ücretli abonelikler henüz başlamadı.</p></div><div class="pricing-grid"><article class="price-card"><h3>Basic</h3><p>İlk müşteri projeniz için.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 1 aktif proje</li><li><svg class="icon"><use href="#i-check"/></svg> 1 geliştirici</li><li><svg class="icon"><use href="#i-check"/></svg> En fazla 3 müşteri</li></ul><span class="plan-coming">Ücretsiz paket · Planlanıyor</span></article><article class="price-card"><h3>Freelancer</h3><p>Düzenli proje akışı için.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> En fazla 10 aktif proje</li><li><svg class="icon"><use href="#i-check"/></svg> 1 geliştirici</li><li><svg class="icon"><use href="#i-check"/></svg> Temel çalışma alanı markalaması</li></ul><span class="plan-coming">Ücretli paket · Planlanıyor</span></article><article class="price-card featured-price"><h3>Studio</h3><p>Birlikte çalışan ajanslar için.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> En fazla 100 aktif proje</li><li><svg class="icon"><use href="#i-check"/></svg> 10 geliştirici dahil</li><li><svg class="icon"><use href="#i-check"/></svg> Gelişmiş markalama ve entegrasyonlar</li></ul><span class="plan-coming">Ücretli paket · Planlanıyor</span></article></div><p class="pricing-disclaimer">Paket ayrıntıları ön gösterimdir ve genel kullanıma açılmadan önce değişebilir. Sizi hazır olmayan bir ödeme sayfasına yönlendirmeyiz.</p></div></section>
+
+    <section class="section close-section" aria-labelledby="close-title"><div class="container"><div class="close-card"><div class="close-orb" aria-hidden="true"></div><h2 id="close-title">Daha az takip.<br>Daha çok <em>sonuç.</em></h2><p>Her müşteri talebinin net bir yolu, her projenin de tamamlanmak için daha iyi bir yöntemi olsun.</p><div class="button-row"><a class="button button-light button-lg" href="#demo">Demoyu keşfet <svg class="icon"><use href="#i-arrow"/></svg></a><a class="button button-outline-light button-lg" href="https://app.dev2done.web86.site/admin/login">Uygulamayı aç <svg class="icon"><use href="#i-external"/></svg></a></div></div>
+    <div class="faq" id="faq"><div class="faq-intro"><h2>Sık sorulan<br>sorular.</h2></div><div class="faq-items"><details><summary>Müşterilerin geliştirici hesabı açması gerekir mi?<span class="faq-toggle">+</span></summary><p>Hayır. Müşteriler normal geliştirici hesabı yerine e-posta tabanlı özel proje erişimini kullanır.</p></details><details><summary>Müşteriler yalnızca gereksinimleri değil, tamamlanan işi de onaylayabilir mi?<span class="faq-toggle">+</span></summary><p>Evet. Görev kapsamının onayı ile teslim edilen sonucun kabulü iş akışında ayrı adımlardır.</p></details><details><summary>AI ajanları otomatik olarak dahil mi?<span class="faq-toggle">+</span></summary><p>Dev2Done, izin kontrollü API aracılığıyla harici AI ajanlarını destekler. Bir yürütücünün veya AI sağlayıcısının ayrıca yapılandırılması gerekir.</p></details><details><summary>Proje teknik şartnamesini dışa aktarabilir miyim?<span class="faq-toggle">+</span></summary><p>Evet. Seçtiğiniz görevleri ek ayrıntılar ve tahminlerle birlikte dört belge dilinden birinde PDF veya DOCX olarak dışa aktarabilirsiniz.</p></details><details><summary>Dev2Done herkese açık kayda başladı mı?<span class="faq-toggle">+</span></summary><p>Henüz değil. Herkese açık kayıt için hazırlanıyoruz. Mevcut kullanıcılar uygulamaya giriş yapabilir.</p></details></div></div></div></section>
+  </main>
+  <dialog class="trial-dialog" id="trial-dialog" aria-labelledby="trial-title" aria-describedby="trial-description">
+    <button class="dialog-close" type="button" data-close-trial aria-label="Pencereyi kapat">×</button>
+    <div class="trial-orbit" aria-hidden="true">✦</div>
+    <h2 id="trial-title">Studio deneme sürümü yakında.</h2>
+    <p id="trial-description">7 günlük Studio denemesi herkese açık lansman için planlandı. Kayıt henüz açık değil; bu sırada etkileşimli proje demosunu inceleyebilirsiniz.</p>
+    <div class="button-row"><a class="button button-primary" href="#demo" data-close-trial>Demoyu keşfet <svg class="icon"><use href="#i-arrow"/></svg></a><button class="button button-secondary" type="button" data-close-trial>Kapat</button></div>
+  </dialog>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand">
+      <a class="brand" href="/tr/">
+          <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+          <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a><p>Geliştiriciler için tasarlandı.<br>Müşteriler için basit.</p></div><div class="footer-links"><div><strong>Keşfet</strong><a href="#demo">Ürün demosu</a><a href="#workflow">Nasıl çalışır?</a><a href="#ai">AI ve ajanlar</a><a href="#pricing">Paketler</a></div><div><strong>Platform</strong><a href="https://app.dev2done.web86.site/admin/login">Giriş yap</a><a href="https://github.com/web86/project-brief" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#faq">SSS</a></div></div></div><div class="footer-bottom"><span>© 2026 Dev2Done. Tüm hakları saklıdır.</span><span>Fikirden sonuca. <svg class="icon"><use href="#i-arrow"/></svg></span></div></div></footer>
+</body>
+</html>
