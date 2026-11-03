@@ -97,43 +97,31 @@
       });
     });
 
-    const steps = [
-      {tag:'New request',title:'It starts with a simple idea.',description:'Your client describes what they need in their own words. Dev2Done keeps the request in the project, ready for clarification and planning.',example:'“We need a contact form that works well on phones.”'},
-      {tag:'Clarification',title:'Turn questions into clarity.',description:'Ask what matters, discuss the details, and attach examples — all in the task instead of scattered messages.',example:'“Should we include a phone field? Where should new submissions go?”'},
-      {tag:'Scope approved',title:'Agree on what will be built.',description:'The client approves the requirements before the team starts. Scope approval is recorded separately from the eventual acceptance of work.',example:'✓ Requirements approved by the client'},
-      {tag:'In progress',title:'Move work forward.',description:'Developers manage their work, estimates, internal notes, and assignments while the client follows understandable project progress.',example:'Contact form · Implementation in progress · 6.5 hours estimated'},
-      {tag:'Client review',title:'Make feedback part of delivery.',description:'Send completed work back for client review. They can accept it or request changes without starting another email thread.',example:'“Looks great. Please update the button text and we’re ready.”'},
-      {tag:'Completed',title:'Know when a task is truly done.',description:'The result is accepted, the task history stays available, and everyone can see what was agreed and delivered.',example:'✓ Contact form · Done'}
-    ];
-    const stepButtons = [...document.querySelectorAll('.step-item')];
-    const fields = {
-      count:document.getElementById('step-counter'), tag:document.getElementById('step-tag'),
-      title:document.getElementById('step-title'), description:document.getElementById('step-description'),
-      example:document.getElementById('step-example')
-    };
-    function setStep(index, focus = false) {
-      const item = steps[index];
-      if (!item) return;
-      stepButtons.forEach((button,i)=>{
+    // The product showcase uses accessible tabs with six static HTML/CSS infographics.
+    const capabilityTabs = [...document.querySelectorAll('.sc-tab')];
+    const capabilityPanels = [...document.querySelectorAll('.sc-panel')];
+    function selectCapability(index, focus = false) {
+      if (index < 0 || index >= capabilityTabs.length) return;
+      capabilityTabs.forEach((tab,i) => {
         const active = i === index;
-        button.classList.toggle('is-active', active);
-        button.setAttribute('aria-selected', String(active));
-        button.tabIndex = active ? 0 : -1;
-        if (active && focus) button.focus();
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        if (active && focus) tab.focus();
       });
-      if (fields.count) fields.count.textContent = `STEP ${String(index + 1).padStart(2,'0')} / 06`;
-      if (fields.tag) fields.tag.textContent = item.tag;
-      if (fields.title) fields.title.textContent = item.title;
-      if (fields.description) fields.description.textContent = item.description;
-      if (fields.example) fields.example.textContent = item.example;
+      capabilityPanels.forEach((panel,i) => { panel.hidden = i !== index; });
     }
-    stepButtons.forEach((button,i)=>{
-      button.addEventListener('click',()=>setStep(i));
-      button.addEventListener('keydown',e=>{
-        if (!['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) return;
-        e.preventDefault();
-        const dir = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : -1;
-        setStep((i + dir + steps.length) % steps.length,true);
+    capabilityTabs.forEach((tab,index) => {
+      tab.addEventListener('click', () => selectCapability(index));
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % capabilityTabs.length;
+        else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + capabilityTabs.length) % capabilityTabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = capabilityTabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectCapability(next, true);
       });
     });
   }
