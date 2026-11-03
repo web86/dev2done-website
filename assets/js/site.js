@@ -1,38 +1,49 @@
-/* Dev2Done static website — no frameworks, cookies, API calls or build step. */
+/* Dev2Done static website — independent localized HTML pages, no build step. */
 (() => {
   'use strict';
 
-  // Only English exists in the first release. To add a language later:
-  // 1. Upload the translated HTML at /ru/index.html, /tr/index.html, /zh/index.html.
-  // 2. Add the language code to AVAILABLE_LOCALES below.
-  // 3. Include this same JS and absolute /assets/ references in translated pages.
-  const AVAILABLE_LOCALES = ['en'];
-  const LOCALE_ROOTS = { en: '/', ru: '/ru/', tr: '/tr/', zh: '/zh/' };
+  // Languages are complete static HTML documents, not runtime translated fragments.
+  const LOCALE_ROOTS = { en: '/', ru: '/ru/', tr: '/tr/', zh: '/zh-cn/' };
+  const STORAGE_KEY = 'dev2done-language';
 
-  function chooseLocale(code) {
-    const lang = String(code || '').toLowerCase();
-    if (/^ru(?:-|$)/.test(lang)) return 'ru';
-    if (/^tr(?:-|$)/.test(lang)) return 'tr';
-    // Match only Simplified Chinese. zh-TW/HK/MO and ambiguous 'zh' fall back to English.
-    if (/^(zh-cn|zh-hans|zh-sg)(?:-|$)/.test(lang)) return 'zh';
-    if (/^en(?:-|$)/.test(lang)) return 'en';
+  function normalizeLocale(code) {
+    const language = String(code || '').trim().toLowerCase().replace(/_/g, '-');
+    if (/^ru(?:-|$)/.test(language)) return 'ru';
+    if (/^tr(?:-|$)/.test(language)) return 'tr';
+    if (/^(zh-cn|zh-hans|zh-sg)(?:-|$)/.test(language)) return 'zh';
+    if (/^en(?:-|$)/.test(language)) return 'en';
     return null;
   }
 
+  function savedLocale() {
+    try { const value = localStorage.getItem(STORAGE_KEY); return LOCALE_ROOTS[value] ? value : null; }
+    catch (_) { return null; }
+  }
+
+  function rememberLocale(locale) {
+    try { localStorage.setItem(STORAGE_KEY, locale); } catch (_) { /* Private browsing may block storage. */ }
+  }
+
   function detectLanguage() {
-    // Auto-redirect only on the English root, never on explicit translated URLs.
-    const path = window.location.pathname;
-    if (path !== '/' && path !== '/index.html') return;
-    const override = new URLSearchParams(window.location.search).get('lang');
-    if (override && AVAILABLE_LOCALES.includes(chooseLocale(override))) return;
-    const languages = navigator.languages?.length ? navigator.languages : [navigator.language || 'en'];
-    for (const language of languages) {
-      const chosen = chooseLocale(language);
-      if (AVAILABLE_LOCALES.includes(chosen) && chosen !== 'en') {
-        window.location.replace(LOCALE_ROOTS[chosen] + window.location.search + window.location.hash);
-        return;
+    // Respect explicit /ru/, /tr/, and /zh-cn/ links. Detect only on the English root.
+    if (!['/', '/index.html'].includes(window.location.pathname)) return;
+    const parameters = new URLSearchParams(window.location.search);
+    const explicit = normalizeLocale(parameters.get('lang'));
+    if (explicit) {
+      rememberLocale(explicit);
+      if (explicit !== 'en') window.location.replace(LOCALE_ROOTS[explicit] + window.location.hash);
+      return;
+    }
+    let preferred = savedLocale();
+    if (!preferred) {
+      const languages = navigator.languages?.length ? navigator.languages : [navigator.language || 'en'];
+      for (const language of languages) {
+        preferred = normalizeLocale(language);
+        if (preferred) break;
       }
-      if (AVAILABLE_LOCALES.includes(chosen)) return;
+    }
+    if (preferred && preferred !== 'en') {
+      window.location.replace(LOCALE_ROOTS[preferred] + window.location.hash);
     }
   }
   detectLanguage();
@@ -60,14 +71,37 @@
       trialDialog.querySelectorAll('[data-close-trial]').forEach(control => control.addEventListener('click', () => trialDialog.close()));
       trialDialog.addEventListener('click', event => { if (event.target === trialDialog) trialDialog.close(); });
     }
+    const languageSwitcher = document.getElementById('language-switcher');
+    if (languageSwitcher) {
+      languageSwitcher.querySelectorAll('[data-lang-code]').forEach(link => {
+        link.addEventListener('click', event => {
+          const locale = link.dataset.langCode;
+          if (!LOCALE_ROOTS[locale]) return;
+          rememberLocale(locale);
+          event.preventDefault();
+          const url = new URL(LOCALE_ROOTS[locale], window.location.origin);
+          url.hash = window.location.hash;
+          window.location.assign(url.href);
+        });
+      });
+      document.addEventListener('click', event => {
+        if (!languageSwitcher.contains(event.target)) languageSwitcher.open = false;
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && languageSwitcher.open) {
+          languageSwitcher.open = false;
+          languageSwitcher.querySelector('summary')?.focus();
+        }
+      });
+    }
     const menu = document.querySelector('.menu-button');
     const nav = document.getElementById('main-nav');
     if (menu && nav) {
-      const closeMenu = () => { document.querySelector('.site-header')?.classList.remove('menu-open'); nav.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open menu'); };
+      const closeMenu = () => { document.querySelector('.site-header')?.classList.remove('menu-open'); nav.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', document.documentElement.dataset.menuOpenLabel || 'Open menu'); };
       menu.addEventListener('click', () => {
         const opened = nav.classList.toggle('is-open'); document.querySelector('.site-header')?.classList.toggle('menu-open', opened);
         menu.setAttribute('aria-expanded', String(opened));
-        menu.setAttribute('aria-label', opened ? 'Close menu' : 'Open menu');
+        menu.setAttribute('aria-label', opened ? (document.documentElement.dataset.menuCloseLabel || 'Close menu') : (document.documentElement.dataset.menuOpenLabel || 'Open menu'));
       });
       nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
       document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
