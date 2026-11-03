@@ -1,0 +1,42 @@
+/* Dev2Done screenshot presentation, added after brand-gradient.css.
+   The real demos open in separate tabs; no iframe or nested scroll. */
+.screenshot-window {overflow:hidden;border-radius:19px}
+.screenshot-window .window-top {position:relative;z-index:1}
+.screenshot-window .hero-screenshot {display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;background:#171d26}
+.screenshot-demo {isolation:isolate}
+.screenshot-demo .demo-toolbar {padding:20px 25px;gap:18px;flex-wrap:wrap}
+.screenshot-demo .role-tabs {max-width:100%}
+.screenshot-demo .role-tab {font-size:15px;padding:11px 18px}
+.screenshot-demo .demo-chooser {margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:#d5e4ff;font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap}
+.screenshot-demo .demo-chooser:hover {color:#fff}
+.screenshot-demo .demo-chooser .icon {width:16px;height:16px}
+.screenshot-demo .demo-preview-stack {width:100%;min-width:0;background:#171e28}
+.screenshot-demo .demo-preview-panel {min-width:0}
+.screenshot-demo .demo-preview-panel[hidden] {display:none!important}
+.screenshot-demo .demo-screenshot-link {display:block;position:relative;line-height:0;overflow:hidden}
+.screenshot-demo .demo-screenshot-link img {width:100%;height:auto;aspect-ratio:8/5;display:block;object-fit:contain;background:#171e28}
+.screenshot-demo .demo-screenshot-link:hover img {filter:brightness(1.055)}
+.screenshot-demo .demo-screenshot-link img {transition:filter .22s ease}
+.screenshot-demo .demo-view-actions {display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:17px 25px;border-top:1px solid rgba(130,157,215,.17);background:linear-gradient(100deg,rgba(19,43,76,.52),rgba(40,26,65,.30));font-size:15px;color:#a9b8d3}
+.screenshot-demo .demo-view-actions a {display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border-radius:10px;border:1px solid rgba(110,164,248,.54);color:#f2f6ff;text-decoration:none;font-weight:650;font-size:15px;background:linear-gradient(#172138,#172138) padding-box,linear-gradient(110deg,#47bafe,#ae65fa) border-box;white-space:nowrap}
+.screenshot-demo .demo-view-actions a:hover {background:linear-gradient(#1e2b4b,#1e2b4b) padding-box,linear-gradient(110deg,#47bafe,#ae65fa) border-box}
+.screenshot-demo .demo-view-actions .icon {width:16px;height:16px}
+.screenshot-demo .demo-footer {font-size:14px;gap:12px}
+.screenshot-demo .demo-footer span {font-size:14px;color:#a8b6cd}
+.screenshot-demo .demo-footer a {display:inline-flex;align-items:center;gap:6px;color:#b8cdff;text-decoration:none;font-size:14px;font-weight:600}
+.screenshot-demo .demo-footer a:hover {color:#fff}
+.screenshot-demo .demo-footer .icon {width:15px;height:15px}
+@media(max-width:650px){
+  .screenshot-window{border-radius:12px}
+  .screenshot-demo .demo-toolbar{padding:14px}
+  .screenshot-demo .role-tabs{width:100%}
+  .screenshot-demo .role-tab{flex:1;min-width:0;font-size:14px;padding:11px 6px}
+  .screenshot-demo .demo-chooser{width:100%;justify-content:center;margin:0;font-size:14px}
+  .screenshot-demo .demo-view-actions{padding:14px;gap:12px}
+  .screenshot-demo .demo-view-actions>span{font-size:14px}
+  .screenshot-demo .demo-view-actions a{width:100%;justify-content:center}
+  .screenshot-demo .demo-footer{padding:12px 14px;gap:8px}
+  .screenshot-demo .demo-footer>span{display:none}
+  .screenshot-demo .demo-footer a{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.screenshot-demo .demo-screenshot-link img{transition:none}}

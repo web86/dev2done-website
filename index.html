@@ -25,10 +25,9 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
 </style>
 <script>document.documentElement.classList.add('d2d-booting');(function(){var done=false;function reveal(){if(done)return;done=true;document.documentElement.classList.remove('d2d-booting');document.documentElement.classList.add('d2d-leaving');setTimeout(function(){document.documentElement.classList.remove('d2d-leaving');document.getElementById('site-loader')?.remove()},410)}window.addEventListener('load',reveal,{once:true});window.addEventListener('pageshow',function(e){if(e.persisted)reveal()});setTimeout(reveal,2500)})();</script>
   <link rel="stylesheet" href="/assets/css/brand-gradient.css">
-  <link rel="stylesheet" href="/assets/css/demo-embed.css">
+  <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/ambient-hero.js" defer></script>
-  <script src="/assets/js/demo-embed.js" defer></script>
 </head>
 <body>
   <div id="site-loader" role="status" aria-label="Loading Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
@@ -94,28 +93,14 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
           </div>
           <p class="hero-trial">7-day Studio trial <span aria-hidden="true">·</span> No credit card required</p>
         </div>
-        <div class="hero-visual" aria-label="Illustrative project workspace using synthetic demonstration data">
-          <div class="mock-window hero-window">
-            <div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span class="window-address">Dev2Done / Workspace</span><span class="window-ellipsis">•••</span></div>
-            <div class="mock-app">
-              <aside class="mock-sidebar" aria-hidden="true">
-                <div class="mock-sidebar-logo">D2D</div><div class="sidebar-divider"></div>
-                <span class="mock-side-item active"><svg class="icon"><use href="#i-layers"/></svg><span>Projects</span></span>
-                <span class="mock-side-item"><svg class="icon"><use href="#i-users"/></svg><span>Team</span></span>
-                <span class="mock-side-item"><svg class="icon"><use href="#i-bell"/></svg><span>Notifications</span></span>
-                <div class="mock-side-spacer"></div><span class="mock-side-bottom">A<span>Acme Studio</span></span>
-              </aside>
-              <div class="mock-main">
-                <div class="mock-crumb">Projects <span>/</span> Acme Website</div>
-                <div class="mock-header-row"><div><h2>Acme Website</h2><p>Clear scope. Confident delivery.</p></div><span class="avatar-stack"><b>AL</b><b>MK</b><b class="avatar-bot">✳</b></span></div>
-                <div class="mock-stats"><div><span>Tasks</span><strong>24</strong></div><div><span>Completed</span><strong>16</strong></div><div><span>In review</span><strong>4</strong></div></div>
-                <div class="mock-progress-label"><span>Project progress</span><strong>67%</strong></div><div class="mock-progress-track"><span></span></div>
-                <div class="mock-list-title">Recent tasks <span>View all</span></div>
-                <div class="mock-task"><span class="task-check done"><svg class="icon"><use href="#i-check"/></svg></span><div><strong>Homepage layout</strong><small>#1.2 · Design</small></div><span class="mini-status green">Done</span></div>
-                <div class="mock-task"><span class="task-check review"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>Contact form</strong><small>#2.4 · Development</small></div><span class="mini-status amber">In review</span></div>
-                <div class="mock-task"><span class="task-check working"><svg class="icon"><use href="#i-code"/></svg></span><div><strong>Mobile navigation</strong><small>#2.5 · Development</small></div><span class="mini-status blue">In progress</span></div>
-              </div>
+        <div class="hero-visual" aria-label="Dev2Done project workspace preview">
+          <div class="mock-window hero-window screenshot-window">
+            <div class="window-top" aria-hidden="true">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <span class="window-address">Dev2Done / Workspace</span>
+              <span class="window-ellipsis">•••</span>
             </div>
+            <img class="hero-screenshot" src="/assets/img/main.webp" alt="Dev2Done developer workspace showing a portfolio of client projects and their progress" width="2048" height="1280" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -124,28 +109,38 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
     <section class="section section-demo" id="demo" aria-labelledby="demo-title">
       <div class="container">
         <div class="section-header center"><h2 id="demo-title">Powerful for you.<br><span class="muted-heading">Effortless for clients.</span></h2><p>You and your client work on the same project, without having to see the same complexity.</p></div>
-        <div class="demo-stage" id="live-demo-stage">
+        <div class="demo-stage screenshot-demo" id="live-demo-stage">
           <div class="demo-toolbar">
-            <div class="role-tabs" role="tablist" aria-label="Choose demo perspective">
-              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer"><svg class="icon"><use href="#i-code"/></svg> Developer view</button>
+            <div class="role-tabs" role="tablist" aria-label="Compare developer and client perspectives">
+              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer" tabindex="0"><svg class="icon"><use href="#i-code"/></svg> Developer view</button>
               <button type="button" id="tab-client" class="role-tab" role="tab" aria-selected="false" aria-controls="panel-client" data-role="client" tabindex="-1"><svg class="icon"><use href="#i-users"/></svg> Client view</button>
             </div>
-            <div class="demo-window-actions">
-              <a class="demo-link" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Open demo <svg class="icon"><use href="#i-external"/></svg></a>
-              <button type="button" class="demo-fullscreen" id="demo-fullscreen" aria-label="Enter fullscreen demo"><svg class="icon"><use href="#i-external"/></svg><span>Fullscreen</span></button>
+            <a class="demo-chooser" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Open live demo <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="demo-preview-stack">
+            <div id="panel-developer" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-developer" tabindex="0">
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer" aria-label="Open the live Developer demo in a new tab">
+                <img src="/assets/img/dev.webp" alt="Dev2Done developer view of Northstar Commerce: task cards, project management and team controls" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Manage tasks, team and project delivery.</span>
+                <a href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer">Open Developer demo <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+            <div id="panel-client" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden>
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer" aria-label="Open the live Client demo in a new tab">
+                <img src="/assets/img/client.webp" alt="Dev2Done client view of Northstar Commerce: ideas, status filters and client discussions" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Follow progress and review the same project.</span>
+                <a href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer">Open Client demo <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
             </div>
           </div>
-          <div class="demo-frame-stack">
-            <div id="panel-developer" class="role-panel demo-frame-panel" role="tabpanel" aria-labelledby="tab-developer">
-              <div class="demo-frame-loading" data-loading="developer" role="status"><span class="demo-frame-spinner" aria-hidden="true"></span><span>Loading developer workspace…</span></div>
-              <iframe id="frame-developer" title="Dev2Done demo — Developer workspace" data-src="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
-            </div>
-            <div id="panel-client" class="role-panel demo-frame-panel" role="tabpanel" aria-labelledby="tab-client" hidden>
-              <div class="demo-frame-loading" data-loading="client" role="status"><span class="demo-frame-spinner" aria-hidden="true"></span><span>Loading client workspace…</span></div>
-              <iframe id="frame-client" title="Dev2Done demo — Client workspace" data-src="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
-            </div>
+          <div class="demo-footer">
+            <span>One project. Two perspectives.</span>
+            <a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Choose a demo <svg class="icon"><use href="#i-arrow"/></svg></a>
           </div>
-          <div class="demo-footer"><span>See the same project from two perspectives.</span><a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Trouble loading? Open the demo directly <svg class="icon"><use href="#i-external"/></svg></a></div>
         </div>
       </div>
     </section>
