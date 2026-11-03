@@ -27,8 +27,10 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
   <link rel="stylesheet" href="/assets/css/brand-gradient.css">
   <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
   <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
+  <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/ambient-hero.js" defer></script>
+  <script src="/assets/js/agent-workflow.js" defer></script>
 </head>
 <body>
   <div id="site-loader" role="status" aria-label="Loading Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
@@ -193,11 +195,77 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
       </div>
     </section>
 
-    <section class="section ai-section" id="ai" aria-labelledby="ai-title"><div class="container"><div class="section-header center dark-header"><h2 id="ai-title">Your team. Your AI agents.<br><span>One workflow.</span></h2><p>Use AI to shape better requirements, then bring external agents into the work — without losing human oversight.</p></div>
-      <div class="ai-grid"><article class="ai-card"><div class="ai-card-heading"><span class="ai-icon"><svg class="icon"><use href="#i-spark"/></svg></span><span>AI TASK ASSISTANT</span></div><h3>Go from rough idea<br>to clear requirements.</h3><p>Improve task descriptions, surface missing details, and get a structured proposal you can review before applying.</p><div class="ai-example"><div class="ai-example-label">ORIGINAL REQUEST</div><p>“Our site needs a better contact form.”</p><div class="ai-example-divider"><svg class="icon"><use href="#i-arrow"/></svg> AI suggestion</div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Define required fields and validation</span></div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Add success and error states</span></div><div class="ai-suggestion"><svg class="icon"><use href="#i-check-circle"/></svg><span>Confirm mobile accessibility</span></div></div><small class="ai-disclaimer">You review the suggestion. Changes are never silently applied.</small></article>
-      <article class="ai-card"><div class="ai-card-heading"><span class="ai-icon"><svg class="icon"><use href="#i-bot"/></svg></span><span>EXTERNAL AI AGENTS</span></div><h3>Delegate the analysis.<br>Keep the decisions.</h3><p>Connect your own executor, assign it a task, hold private conversations, and choose what to share with your client.</p><div class="agent-example"><div class="agent-top"><span class="agent-avatar"><svg class="icon"><use href="#i-bot"/></svg></span><span><strong>Requirements reviewer</strong><small>Assigned to Contact form</small></span><span class="agent-dot"></span></div><div class="agent-message"><strong>Team instruction</strong><p>Find two ambiguous requirements and propose acceptance criteria.</p></div><div class="agent-result"><span class="agent-result-label"><svg class="icon"><use href="#i-lock"/></svg> PRIVATE AGENT RESULT</span><p>Found two requirements to clarify: spam protection and expected delivery behavior.</p><div><span>Review result</span><svg class="icon"><use href="#i-arrow"/></svg></div></div></div><small class="ai-disclaimer">External execution requires your configured agent/provider.</small></article></div>
-      <div class="ai-bottom"><span><svg class="icon"><use href="#i-shield"/></svg> Scoped access, private results, human-controlled sharing.</span><a href="#features">See what else is included <svg class="icon"><use href="#i-arrow"/></svg></a></div>
-    </div></section>
+    <section class="section ai-section agent-workflow-section" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-header center dark-header agent-workflow-heading">
+          <h2 id="ai-title">Your team. Your AI agents.<br><span>One workflow.</span></h2>
+          <p>Assign tasks to developers and AI agents, collaborate in one workspace, and stay in control of every result.</p>
+        </div>
+        <div class="agent-workflow-layout">
+          <div class="agent-workflow-copy">
+            <h3>Work together.<br><span>With AI.</span></h3>
+            <p>Extend your team's capabilities with external AI agents — while keeping people in charge.</p>
+            <div class="agent-workflow-benefits">
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+                <div><strong>Part of your team</strong><p>Assign agents to projects and tasks alongside your developers.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+                <div><strong>Collaborate privately</strong><p>Give instructions, ask follow-up questions, and review agent reports.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <div><strong>You make the decisions</strong><p>Control access, review the results, and choose what clients can see.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="agent-workflow-console" aria-label="Illustrative workflow for a developer and an external AI agent">
+            <div class="agent-demo-bar">
+              <div class="agent-demo-crumb"><span>Northstar Commerce</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>Contact form</strong></div>
+              <span class="agent-demo-status">In progress</span>
+            </div>
+            <div class="agent-demo-intro">
+              <h3>Contact form</h3>
+              <p>Requirements review &amp; delivery planning</p>
+            </div>
+            <div class="agent-demo-collaborators">
+              <div class="agent-demo-label">Assigned collaborators</div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar human">JD</div>
+                <div class="agent-demo-person"><strong>Jamie Davis</strong><span>Developer</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar agent"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></div>
+                <div class="agent-demo-person"><strong>Requirements reviewer</strong><span>External AI agent</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+            </div>
+            <div class="agent-demo-instruction">
+              <span class="agent-demo-instruction-label"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Team instruction</span>
+              <p>Review the contact form requirements. Identify ambiguities and suggest acceptance criteria.</p>
+            </div>
+            <div class="agent-demo-report">
+              <div class="agent-demo-report-heading"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <strong>Private agent report</strong><span>Team only</span></div>
+              <p>Two requirements need clarification:</p>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Spam protection and validation</div>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Submission behavior and error handling</div>
+              <div class="agent-demo-followup"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Ask agent to refine <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+            </div>
+            <div class="agent-demo-review">
+              <div class="agent-demo-review-copy"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>Human review</strong><small>Only you decide what to share</small></span></div>
+              <span class="agent-demo-share">Share with client <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="agent-assistant-strip">
+          <div class="agent-assistant-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <div><strong>AI helps before the work even starts.</strong><p>Turn rough client ideas into clearer requirements — review every suggestion before applying.</p></div>
+        </div>
+        <p class="agent-workflow-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> External AI agents require a configured executor or provider. Access and client sharing remain under your team's control.</p>
+      </div>
+    </section>
 
     <section class="section features-section" id="features" aria-labelledby="features-title"><div class="container"><div class="section-header center"><h2 id="features-title">Everything in its place.<br><span class="muted-heading">Nothing in your way.</span></h2><p>Practical tools for the real work of delivering client projects — not another dashboard to maintain.</p></div><div class="feature-grid">
       <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>Projects & tasks</h3><p>Organize tasks into sections, follow statuses, and keep the entire project history in context.</p></article>
