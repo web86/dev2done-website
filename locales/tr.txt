@@ -1,0 +1,231 @@
+D2D
+İçeriğe geç
+Dev2Done
+Ürün
+Nasıl çalışır?
+AI ve ajanlar
+Özellikler
+Paketler
+Giriş yap
+Demoyu keşfet
+Müşteri projeleri.
+Fikirden sonuca.
+Müşteri projelerini yönetin, gereksinimleri netleştirin, ekibinizle iş birliği yapın ve AI ajanlarını sürece dahil edin — hepsi tek yerde.
+Ücretsiz denemeyi başlat
+7 günlük Studio denemesi
+Kredi kartı gerekmez
+Dev2Done / Çalışma alanı
+Sizin için güçlü.
+Müşteriler için kolay.
+Siz ve müşteriniz aynı projede çalışırsınız; ikiniz de yalnızca ihtiyacınız olan ayrıntıları görürsünüz.
+Geliştirici görünümü
+Müşteri görünümü
+Canlı demoyu aç
+Görevleri, ekibi ve proje teslimini yönetin.
+Geliştirici demosunu aç
+Aynı projenin ilerlemesini izleyin ve çalışmaları inceleyin.
+Müşteri demosunu aç
+Tek proje. İki bakış açısı.
+Çalışma biçiminiz için
+tasarlandı.
+İlk müşteri talebinden son teslimata. Her şey bağlantılı.
+Web sitesi ve entegrasyonlar
+Müşteriler ve AI desteği
+Ekip çalışması
+Onay ve teslimat
+Akıllı bildirimler
+Güvenlik ve kontrol
+Web siteniz. Projelerinizle bağlantılı.
+Kendi web sitenizden gelen talepleri API ile Dev2Done'a aktarın. Başvuruları inceleyin, projeler oluşturun ve webhook'larla mevcut araçlarınızı bağlayın.
+Stüdyonuzun web sitesi
+Yeni proje talebi
+Proje · Web sitesi yenileme
+E-posta · client@example.com
+Talebi gönder
+Dev2Done talepleri
+Yeni müşteri talebi
+İnceleme bekliyor
+Talebi incele ve onayla
+REST API
+Proje oluşturuldu
+Giden webhook'lar diğer araçları bağlar
+Müşteriler için kolay. AI ile daha akıllı.
+Müşterileri güvenli e-posta bağlantısıyla davet edin; parola gerekmez. AI önerileriyle belirsiz fikirleri, müşterinin inceleyebileceği açık görevlere dönüştürün.
+E-posta daveti
+Güvenli bağlantı, parola yok
+Müşteri fikri
+Bir iletişim formuna ihtiyacımız var.
+Telefonlarda çalışmalı ve ekibimizi bilgilendirmeli.
+Fikir taslağı
+AI önerisi
+Daha açık hale getir
+Zorunlu alanları belirle
+Spam koruması ekle
+Mobil davranışı tanımla
+İncele ve uygula
+Tüm ekibiniz. Tek çalışma alanı.
+Geliştiricileri davet edin, sorumlulukları dağıtın, işleri yönetin ve ekip içi konuşmaları müşteri iletişiminden ayrı tutun.
+Ekip üyeleri
+ME
+Morgan Ellis
+Çalışma alanı sahibi
+JD
+Jamie Davis
+Geliştirici
+AK
+Alex Kim
+Proje geliştiricisi
+Atanan görev
+Ana sayfa tasarımı
+Devam ediyor
+Jamie Davis'e atandı
+Özel ekip görüşmesi
+“Önce mobil düzeni inceleyelim.”
+Anlaşın. Geliştirin. Teslim edin.
+Gereksinimleri onaylatın, tamamlanan işi müşteriye inceletin ve PDF veya DOCX biçiminde markalı teknik şartname ve teklifler oluşturun.
+Kapsam onaylandı
+Gereksinimler kararlaştırıldı
+Müşteri incelemesi
+İş incelemeye hazır
+Kabul edildi
+Teslimat onaylandı
+Teknik şartname
+Markalı belgeler ve teklifler
+PDF
+DOCX
+Her zaman haberdar olun.
+Ekibinizi ve müşterilerinizi uygulama içinden, tarayıcı Push bildirimleriyle, Telegram ve e-postayla bilgilendirin.
+Müşteri bir görevi onayladı
+Northstar Commerce · Proje güncellemesi
+Uygulama içi
+Etkinlikler
+Web Push
+Tarayıcı
+Telegram
+Mesajlar
+E-posta
+Güncellemeler
+Sizin için önemli olayları ve kanalları seçin.
+Kontrol sizde kalsın.
+Passkeys, TOTP, rol tabanlı izinler, özel dosyalar ve kapsamı sınırlandırılmış API erişimiyle çalışma alanınızı koruyun.
+Hesap güvenliği
+Passkeys
+Güvenli giriş
+İki faktörlü kimlik doğrulama
+TOTP
+Korunan dosyalar ve sınırlı API erişimi
+Proje erişimi
+Sahip
+Çalışma alanı yönetimi
+Atanmış projeler
+Müşteri
+Müşteriye özel görünüm
+Ekip verileri gizli kalır
+Ekibiniz. AI ajanlarınız.
+Tek iş akışı.
+Geliştiricilere ve AI ajanlarına görev atayın, tek çalışma alanında iş birliği yapın ve her sonucu kontrol edin.
+Birlikte çalışın.
+AI ile.
+Kararlar insanlarda kalırken harici AI ajanlarıyla ekibinizin kapasitesini artırın.
+Ekibinizin bir parçası
+Ajanları geliştiricilerinizle birlikte projelere ve görevlere atayın.
+Özel olarak iş birliği yapın
+Talimat verin, ek sorular sorun ve ajan raporlarını inceleyin.
+Kararları siz verirsiniz
+Erişimi yönetin, sonuçları inceleyin ve müşterilerin neyi göreceğini belirleyin.
+Northstar Commerce
+İletişim formu
+Gereksinim incelemesi ve teslimat planlaması
+Atanan katılımcılar
+Gereksinim inceleyicisi
+Harici AI ajanı
+Ekip talimatı
+İletişim formunun gereksinimlerini incele. Belirsizlikleri bul ve kabul ölçütleri öner.
+Özel ajan raporu
+Yalnızca ekip
+İki gereksinimin netleştirilmesi gerekiyor:
+Spam koruması ve doğrulama
+Gönderim davranışı ve hata yönetimi
+Ajandan ayrıntılandırmasını iste
+İnsan incelemesi
+Nelerin paylaşılacağına yalnızca siz karar verirsiniz
+Müşteriyle paylaş
+AI, işe başlamadan önce de yardımcı olur.
+Belirsiz müşteri fikirlerini açık gereksinimlere dönüştürün; her öneriyi uygulamadan önce inceleyin.
+Harici AI ajanları için yapılandırılmış bir yürütücü veya sağlayıcı gerekir. Erişim ve müşteriyle paylaşım ekibinizin kontrolündedir.
+Her şey yerli yerinde.
+Hiçbir şey yolunuzda değil.
+Sırf yönetmek için yeni bir panel değil; müşteri projelerini gerçekten teslim etmenize yardımcı olan araçlar.
+Projeler ve görevler
+Görevleri bölümlere ayırın, durumları izleyin ve proje geçmişini bağlamıyla birlikte saklayın.
+Ekip ve izinler
+Geliştiricileri davet edin, proje erişimini yönetin ve ekip içi çalışmayı müşteri iletişiminden ayrı tutun.
+Görüşmeler ve dosyalar
+Soruları, yorumları, ekran görüntülerini ve ekleri ilgili işin yanında tutun.
+Tahminler ve fiyatlandırma
+Geliştiriciye ve müşteriye ait verileri ayrı tutarak iş tahminlerini ve proje maliyetlerini takip edin.
+PDF ve DOCX dışa aktarma
+Seçili görevlerden, içerik ve belge dili ayarlanabilen profesyonel şartname ve teklifler hazırlayın.
+Gelişmeleri kaçırmayın
+Uygulama içi etkinlikleri ve ayarlanabilir e-posta, Push ve Telegram bildirimlerini takip edin.
+Sizin stüdyonuz.
+Müşterinizin deneyimi.
+Proje alanından davet e-postalarına ve profesyonel belgelere kadar her müşteri temasında stüdyonuzun kimliğini yansıtın.
+Logolu çalışma alanı ve müşteriye sunulan belgeler
+Kayıt olmadan e-posta üzerinden kolay müşteri erişimi
+Özel alan adı ve kurumsal e-posta bağlantısı
+İngilizce, Rusça, Türkçe ve Basitleştirilmiş Çince
+EN
+RU
+TR
+ZH-CN
+Yakında daha fazlası
+Küçük başlayın.
+İşinizle birlikte büyüyün.
+Bağımsız geliştiriciler ve büyüyen stüdyolar için paketler hazırlıyoruz. Herkese açık kayıt ve ücretli abonelikler henüz başlamadı.
+Basic
+İlk müşteri projeniz için.
+1 aktif proje
+1 geliştirici
+En fazla 3 müşteri
+Ücretsiz paket · Planlanıyor
+Freelancer
+Düzenli proje akışı için.
+En fazla 10 aktif proje
+Temel çalışma alanı markalaması
+Ücretli paket · Planlanıyor
+Studio
+Birlikte çalışan ajanslar için.
+En fazla 100 aktif proje
+10 geliştirici dahil
+Gelişmiş markalama ve entegrasyonlar
+Paket ayrıntıları ön gösterimdir ve genel kullanıma açılmadan önce değişebilir. Sizi hazır olmayan bir ödeme sayfasına yönlendirmeyiz.
+Daha az takip.
+Daha çok
+sonuç.
+Her müşteri talebinin net bir yolu, her projenin de tamamlanmak için daha iyi bir yöntemi olsun.
+Demoyu keşfet
+Uygulamayı aç
+Sık sorulan
+sorular.
+Müşterilerin geliştirici hesabı açması gerekir mi?
+Hayır. Müşteriler normal geliştirici hesabı yerine e-posta tabanlı özel proje erişimini kullanır.
+Müşteriler yalnızca gereksinimleri değil, tamamlanan işi de onaylayabilir mi?
+Evet. Görev kapsamının onayı ile teslim edilen sonucun kabulü iş akışında ayrı adımlardır.
+AI ajanları otomatik olarak dahil mi?
+Dev2Done, izin kontrollü API aracılığıyla harici AI ajanlarını destekler. Bir yürütücünün veya AI sağlayıcısının ayrıca yapılandırılması gerekir.
+Proje teknik şartnamesini dışa aktarabilir miyim?
+Evet. Seçtiğiniz görevleri ek ayrıntılar ve tahminlerle birlikte dört belge dilinden birinde PDF veya DOCX olarak dışa aktarabilirsiniz.
+Dev2Done herkese açık kayda başladı mı?
+Henüz değil. Herkese açık kayıt için hazırlanıyoruz. Mevcut kullanıcılar uygulamaya giriş yapabilir.
+×
+Studio deneme sürümü yakında.
+7 günlük Studio denemesi herkese açık lansman için planlandı. Kayıt henüz açık değil; bu sırada etkileşimli proje demosunu inceleyebilirsiniz.
+Kapat
+Geliştiriciler için tasarlandı.
+Müşteriler için basit.
+Keşfet
+Ürün demosu
+Platform
+GitHub
+SSS
