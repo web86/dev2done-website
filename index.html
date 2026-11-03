@@ -7,6 +7,12 @@
   <meta name="description" content="Dev2Done keeps client projects clear—from the first request to final approval. Built for developers, simple for clients, and ready for AI collaboration.">
   <meta name="robots" content="noindex, nofollow">
   <title>Dev2Done — Client projects, from brief to done</title>
+  <link rel="canonical" href="https://dev2done.web86.site/">
+  <link rel="alternate" hreflang="en" href="https://dev2done.web86.site/">
+  <link rel="alternate" hreflang="ru" href="https://dev2done.web86.site/ru/">
+  <link rel="alternate" hreflang="tr" href="https://dev2done.web86.site/tr/">
+  <link rel="alternate" hreflang="zh-CN" href="https://dev2done.web86.site/zh-cn/">
+  <link rel="alternate" hreflang="x-default" href="https://dev2done.web86.site/">
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="stylesheet" href="/assets/css/site.css?ver=2">
   <link rel="stylesheet" href="/assets/css/dark.css?ver=2">
@@ -28,13 +34,14 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
   <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
   <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
   <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
+  <link rel="stylesheet" href="/assets/css/languages.css?v=1">
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/ambient-hero.js" defer></script>
   <script src="/assets/js/agent-workflow.js" defer></script>
 </head>
 <body>
   <div id="site-loader" role="status" aria-label="Loading Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
-  <!-- English-only first release. Language detection is prepared in assets/js/site.js. -->
+  <!-- Static localized pages share the same CSS and JS assets. -->
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
@@ -70,8 +77,22 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
         <a href="#ai">AI & agents</a>
         <a href="#features">Features</a>
         <a href="#pricing">Plans</a>
+        <a class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">Log in</a>
       </nav>
       <div class="nav-actions">
+        <details class="language-switcher" id="language-switcher">
+          <summary class="language-trigger" aria-label="Choose language">
+            <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span class="language-current">EN</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="language-options" aria-label="Available languages">
+            <a href="/" lang="en" hreflang="en" class="language-option" data-lang-code="en" aria-current="page"><span class="language-code">EN</span><span>English</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/ru/" lang="ru" hreflang="ru" class="language-option" data-lang-code="ru"><span class="language-code">RU</span><span>Русский</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/tr/" lang="tr" hreflang="tr" class="language-option" data-lang-code="tr"><span class="language-code">TR</span><span>Türkçe</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/zh-cn/" lang="zh-CN" hreflang="zh-CN" class="language-option" data-lang-code="zh"><span class="language-code">中文</span><span>简体中文</span><span class="language-selected" aria-hidden="true">✓</span></a>
+          </div>
+        </details>
         <a class="nav-login" href="https://app.dev2done.web86.site/admin/login">Log in <svg class="icon"><use href="#i-external"/></svg></a>
         <a class="button button-sm button-primary nav-cta" href="#demo">Explore demo <svg class="icon"><use href="#i-arrow"/></svg></a>
         <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>

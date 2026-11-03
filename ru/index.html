@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ru" data-menu-open-label="Открыть меню" data-menu-close-label="Закрыть меню">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Dev2Done помогает вести клиентские проекты от заявки до сдачи: задачи, согласования, команда и AI-агенты.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dev2Done — Клиентские проекты от идеи до результата</title>
+  <link rel="canonical" href="https://dev2done.web86.site/ru/">
+  <link rel="alternate" hreflang="en" href="https://dev2done.web86.site/">
+  <link rel="alternate" hreflang="ru" href="https://dev2done.web86.site/ru/">
+  <link rel="alternate" hreflang="tr" href="https://dev2done.web86.site/tr/">
+  <link rel="alternate" hreflang="zh-CN" href="https://dev2done.web86.site/zh-cn/">
+  <link rel="alternate" hreflang="x-default" href="https://dev2done.web86.site/">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/site.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/dark.css?ver=2">
+  <link rel="stylesheet" href="/assets/css/ambient-hero.css">
+<style id="d2d-loader-critical">
+html{background:#080d19}
+html.d2d-booting body>:not(#site-loader){visibility:hidden!important}
+#site-loader{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 50%,#182044 0%,#080d19 60%);transition:opacity .38s ease;color:#f8faff}
+html.d2d-booting #site-loader,html.d2d-leaving #site-loader{display:flex}
+html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
+.d2d-loader-emblem{position:relative;font:800 clamp(64px,11vw,104px)/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.045em;background:linear-gradient(115deg,#2bc9ff,#5482ff 43%,#c34df6);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #3475fa36);animation:d2d-breathe 1.6s ease-in-out infinite alternate}
+.d2d-loader-bar{position:absolute;left:10%;right:10%;height:2px;bottom:-22px;background:linear-gradient(90deg,transparent,#4ea9ff 25%,#bb62fb 75%,transparent);transform-origin:left;animation:d2d-progress 1.35s ease-in-out infinite}
+@keyframes d2d-breathe{from{opacity:.72;transform:scale(.985)}to{opacity:1;transform:scale(1.015)}}
+@keyframes d2d-progress{0%{transform:scaleX(.04);opacity:.3}65%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:.25}}
+@media(prefers-reduced-motion:reduce){.d2d-loader-emblem,.d2d-loader-bar{animation:none}}
+</style>
+<script>document.documentElement.classList.add('d2d-booting');(function(){var done=false;function reveal(){if(done)return;done=true;document.documentElement.classList.remove('d2d-booting');document.documentElement.classList.add('d2d-leaving');setTimeout(function(){document.documentElement.classList.remove('d2d-leaving');document.getElementById('site-loader')?.remove()},410)}window.addEventListener('load',reveal,{once:true});window.addEventListener('pageshow',function(e){if(e.persisted)reveal()});setTimeout(reveal,2500)})();</script>
+  <link rel="stylesheet" href="/assets/css/brand-gradient.css">
+  <link rel="stylesheet" href="/assets/css/demo-screenshots.css">
+  <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
+  <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
+  <link rel="stylesheet" href="/assets/css/languages.css?v=1">
+  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/ambient-hero.js" defer></script>
+  <script src="/assets/js/agent-workflow.js" defer></script>
+</head>
+<body>
+  <div id="site-loader" role="status" aria-label="Загрузка Dev2Done"><div class="d2d-loader-emblem" aria-hidden="true">D2D<span class="d2d-loader-bar"></span></div></div>
+  <!-- Static localized pages share the same CSS and JS assets. -->
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H6l-3 3v-7a8 8 0 1 1 17-4Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6zM14 2v6h5M9 13h7M9 17h7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="4"/><path d="M12 3v4m-3-4h6M8 14h.01M16 14h.01M9 18h6"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10M12 2c-3 3-4 6-4 10s1 7 4 10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4m0 16h16M8 15l4-5 4 2 4-7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 14v5H5V5h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="/ru/" aria-label="Главная Dev2Done">
+        
+        <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+        <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Главное меню">
+        <a href="#demo">Продукт</a>
+        <a href="#workflow">Как это работает</a>
+        <a href="#ai">AI и агенты</a>
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">Войти</a>
+      </nav>
+      <div class="nav-actions">
+        <details class="language-switcher" id="language-switcher">
+          <summary class="language-trigger" aria-label="Выбрать язык">
+            <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+            <span class="language-current">RU</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="language-options" aria-label="Доступные языки">
+            <a href="/" lang="en" hreflang="en" class="language-option" data-lang-code="en"><span class="language-code">EN</span><span>English</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/ru/" lang="ru" hreflang="ru" class="language-option" data-lang-code="ru" aria-current="page"><span class="language-code">RU</span><span>Русский</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/tr/" lang="tr" hreflang="tr" class="language-option" data-lang-code="tr"><span class="language-code">TR</span><span>Türkçe</span><span class="language-selected" aria-hidden="true">✓</span></a>
+            <a href="/zh-cn/" lang="zh-CN" hreflang="zh-CN" class="language-option" data-lang-code="zh"><span class="language-code">中文</span><span>简体中文</span><span class="language-selected" aria-hidden="true">✓</span></a>
+          </div>
+        </details>
+        <a class="nav-login" href="https://app.dev2done.web86.site/admin/login">Войти <svg class="icon"><use href="#i-external"/></svg></a>
+        <a class="button button-sm button-primary nav-cta" href="#demo">Смотреть демо <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="fx-ambient" aria-hidden="true">
+        <div class="fx-moving-grid"></div>
+        <div class="fx-spot"></div>
+        <div class="fx-ambient-fade"></div>
+      </div>
+      <div class="container hero-centered">
+        <div class="hero-copy">
+          <h1 id="hero-title">Клиентские проекты.<br><em>От идеи до результата.</em></h1>
+          <p class="hero-lede">Управляйте клиентскими проектами, согласовывайте требования, работайте с командой и подключайте AI-агентов — всё в одном месте.</p>
+          <div class="button-row hero-actions">
+            <button type="button" class="button button-primary button-lg" data-open-trial>Начать бесплатно <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-secondary button-lg" href="#demo">Смотреть демо <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-trial">7 дней пробного Studio <span aria-hidden="true">·</span> Без банковской карты</p>
+        </div>
+        <div class="hero-visual" aria-label="Предпросмотр рабочего пространства Dev2Done">
+          <div class="mock-window hero-window screenshot-window">
+            <div class="window-top" aria-hidden="true">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <span class="window-address">Dev2Done / Рабочее пространство</span>
+              <span class="window-ellipsis">•••</span>
+            </div>
+            <img class="hero-screenshot" src="/assets/img/main.webp" alt="Рабочее пространство Dev2Done со списком клиентских проектов" width="2048" height="1280" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-demo" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-header center"><h2 id="demo-title">Все инструменты для вас.<br><span class="muted-heading">Всё просто для клиента.</span></h2><p>Вы и клиент работаете над одним проектом, но каждому доступен интерфейс без лишней сложности.</p></div>
+        <div class="demo-stage screenshot-demo" id="live-demo-stage">
+          <div class="demo-toolbar">
+            <div class="role-tabs" role="tablist" aria-label="Сравнить интерфейсы разработчика и клиента">
+              <button type="button" id="tab-developer" class="role-tab is-active" role="tab" aria-selected="true" aria-controls="panel-developer" data-role="developer" tabindex="0"><svg class="icon"><use href="#i-code"/></svg> Вид разработчика</button>
+              <button type="button" id="tab-client" class="role-tab" role="tab" aria-selected="false" aria-controls="panel-client" data-role="client" tabindex="-1"><svg class="icon"><use href="#i-users"/></svg> Вид клиента</button>
+            </div>
+            <a class="demo-chooser" href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Открыть живое демо <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="demo-preview-stack">
+            <div id="panel-developer" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-developer" tabindex="0">
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer" aria-label="Открыть демо разработчика в новой вкладке">
+                <img src="/assets/img/dev.webp" alt="Кабинет разработчика с задачами и управлением проектом" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Управляйте задачами, командой и сдачей проекта.</span>
+                <a href="https://app.dev2done.web86.site/admin/projects/19fe7520-ef15-51ae-ae94-3a582ed5474e/brief" target="_blank" rel="noopener noreferrer">Открыть демо разработчика <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+            <div id="panel-client" class="role-panel demo-preview-panel" role="tabpanel" aria-labelledby="tab-client" tabindex="0" hidden>
+              <a class="demo-screenshot-link" href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer" aria-label="Открыть демо клиента в новой вкладке">
+                <img src="/assets/img/client.webp" alt="Кабинет клиента с идеями, статусами и обсуждениями" width="2048" height="1280" loading="lazy" decoding="async">
+              </a>
+              <div class="demo-view-actions">
+                <span>Следите за ходом работы и проверяйте тот же проект.</span>
+                <a href="https://app.dev2done.web86.site/project/19fe7520-ef15-51ae-ae94-3a582ed5474e" target="_blank" rel="noopener noreferrer">Открыть демо клиента <svg class="icon"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="demo-footer">
+            <span>Один проект. Два взгляда.</span>
+            <a href="https://app.dev2done.web86.site/demo" target="_blank" rel="noopener noreferrer">Выбрать демо <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-workflow sc-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-header center sc-header"><h2 id="workflow-title">Создан для того, как <span class="muted-heading">вы работаете.</span></h2><p>От первой заявки до сдачи проекта. Всё связано.</p></div>
+        <div class="sc-layout"><div class="sc-tabs" role="tablist" aria-label="Возможности Dev2Done"><button class="sc-tab is-active" type="button" role="tab" id="sc-tab-0" aria-controls="sc-panel-0" aria-selected="true" tabindex="0" data-capability="0"><span class="sc-num">01</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="sc-tab-text">Сайт и интеграции</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-1" aria-controls="sc-panel-1" aria-selected="false" tabindex="-1" data-capability="1"><span class="sc-num">02</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></span><span class="sc-tab-text">Клиенты и AI-помощник</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-2" aria-controls="sc-panel-2" aria-selected="false" tabindex="-1" data-capability="2"><span class="sc-num">03</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><span class="sc-tab-text">Командная работа</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-3" aria-controls="sc-panel-3" aria-selected="false" tabindex="-1" data-capability="3"><span class="sc-num">04</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="sc-tab-text">Согласование и сдача</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-4" aria-controls="sc-panel-4" aria-selected="false" tabindex="-1" data-capability="4"><span class="sc-num">05</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></span><span class="sc-tab-text">Умные уведомления</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<button class="sc-tab" type="button" role="tab" id="sc-tab-5" aria-controls="sc-panel-5" aria-selected="false" tabindex="-1" data-capability="5"><span class="sc-num">06</span><span class="sc-tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="sc-tab-text">Безопасность и контроль</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><div class="sc-stage"><article class="sc-panel" role="tabpanel" id="sc-panel-0" aria-labelledby="sc-tab-0" tabindex="0"><div class="sc-panel-head"><span class="sc-step">01 / 06</span><h3>Ваш сайт. На связи с проектами.</h3><p>Получайте заявки со своего сайта в Dev2Done через API. Рассматривайте запросы, создавайте проекты и связывайте другие инструменты через вебхуки.</p></div><div class="sc-visual sc-visual-api" role="img" aria-label="Форма на сайте студии передаёт заявку в Dev2Done через API.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Сайт вашей студии</div><strong>Новая заявка</strong><span class="sc-input">Проект · Редизайн сайта</span><span class="sc-input">Email · client@example.com</span><span class="sc-primary-stub">Отправить заявку <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Заявки в Dev2Done</div><strong>Новая заявка клиента</strong><span class="sc-status purple">Ожидает рассмотрения</span><span class="sc-detail">Рассмотреть и одобрить заявку</span></div>
+  </div>
+  <div class="sc-connector"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span>REST API</span></div>
+  <div class="sc-completion"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> <strong>Проект создан</strong><span>Исходящие вебхуки связывают другие сервисы</span></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-1" aria-labelledby="sc-tab-1" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">02 / 06</span><h3>Просто для клиента. Умнее с AI.</h3><p>Приглашайте клиентов по безопасной ссылке из письма — без пароля. AI поможет превратить идеи в понятные задания, а клиент сможет проверить предложения.</p></div><div class="sc-visual sc-visual-ai" role="img" aria-label="Клиент переходит по ссылке без пароля и получает AI-предложение.">
+  <div class="sc-banner"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>Приглашение по email</strong><span>Безопасная ссылка, без пароля</span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div>
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Идея клиента</div><strong>Нужна форма обратной связи.</strong><p>Она должна работать на телефонах и уведомлять нашу команду.</p><span class="sc-status cyan">Черновик идеи</span></div>
+    <div class="sc-box sc-ai-highlight"><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> Предложение AI</div><strong>Сделать понятнее</strong><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Указать обязательные поля</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Добавить защиту от спама</div><div class="sc-tick"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Продумать работу на мобильных</div><span class="sc-primary-stub">Проверить и применить</span></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-2" aria-labelledby="sc-tab-2" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">03 / 06</span><h3>Вся команда. Одно пространство.</h3><p>Приглашайте разработчиков, распределяйте обязанности, управляйте работой и отделяйте внутренние обсуждения от переписки с клиентом.</p></div><div class="sc-visual sc-visual-team" role="img" aria-label="Команда распределяет задачи и обсуждает работу приватно.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Участники команды</div><div class="sc-member"><b class="sc-avatar blue">ME</b><span><strong>Morgan Ellis</strong><small>Владелец пространства</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar violet">JD</b><span><strong>Jamie Davis</strong><small>Разработчик</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-member"><b class="sc-avatar teal">AK</b><span><strong>Alex Kim</strong><small>Разработчик проекта</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div></div>
+    <div class="sc-column"><div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Назначенная задача</div><strong>Дизайн главной страницы</strong><span class="sc-status purple">В работе</span><span class="sc-detail">Назначено Jamie Davis</span></div><div class="sc-private"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Приватное обсуждение команды</strong><small>«Сначала проверим мобильную версию».</small></span></div></div>
+  </div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-3" aria-labelledby="sc-tab-3" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">04 / 06</span><h3>Согласуйте. Создайте. Сдайте.</h3><p>Согласуйте требования, передайте готовую работу клиенту на проверку и создавайте фирменные ТЗ и сметы в PDF или DOCX.</p></div><div class="sc-visual sc-visual-delivery" role="img" aria-label="Требования согласуются, клиент принимает работу, документы экспортируются в PDF или DOCX.">
+  <div class="sc-milestones"><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>Требования согласованы</strong><span>Объём работ утверждён</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><strong>Проверка клиентом</strong><span>Работа готова к проверке</span></div><i><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></i><div><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><strong>Принято</strong><span>Результат подтверждён</span></div></div>
+  <div class="sc-doc"><div class="sc-page"><b></b><i></i><i></i><i></i><i></i></div><div class="sc-doc-content"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span><strong>Техническое задание</strong><small>Фирменные документы и сметы</small></span><div class="sc-formats"><b>PDF</b><b>DOCX</b></div></div></div>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-4" aria-labelledby="sc-tab-4" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">05 / 06</span><h3>Будьте в курсе. Везде.</h3><p>Сообщайте команде и клиентам о событиях проекта через приложение, браузерные Push-уведомления, Telegram и email.</p></div><div class="sc-visual sc-visual-notifications" role="img" aria-label="Одобрение задачи запускает уведомления в приложении, Push, Telegram или email.">
+  <div class="sc-event"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Клиент согласовал задачу</strong><small>Northstar Commerce · Обновление проекта</small></span></div><div class="sc-branch"></div>
+  <div class="sc-channel-grid"><div><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><strong>В приложении</strong><small>Активность</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><strong>Web Push</strong><small>Браузер</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg><strong>Telegram</strong><small>Сообщения</small></div><div><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><strong>Email</strong><small>Обновления</small></div></div>
+  <p class="sc-note">Выбирайте важные события и удобные каналы.</p>
+</div></article>
+<article class="sc-panel" role="tabpanel" id="sc-panel-5" aria-labelledby="sc-tab-5" tabindex="0" hidden><div class="sc-panel-head"><span class="sc-step">06 / 06</span><h3>Контроль остаётся за вами.</h3><p>Защищайте рабочее пространство с помощью Passkeys, TOTP, разграничения ролей, приватных файлов и API-доступа с ограниченными правами.</p></div><div class="sc-visual sc-visual-security" role="img" aria-label="Passkeys, двухфакторная аутентификация, приватные файлы и роли защищают проект.">
+  <div class="sc-two-col">
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Защита аккаунта</div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>Passkeys</strong><small>Безопасный вход</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-line"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>Двухфакторная аутентификация</strong><small>TOTP</small></span><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Защищённые файлы и ограниченный доступ к API</div></div>
+    <div class="sc-box "><div class="sc-box-title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg> Доступ к проекту</div><div class="sc-permission"><strong>Владелец</strong><span>Управление пространством</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>Разработчик</strong><span>Назначенные проекты</span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div class="sc-permission"><strong>Клиент</strong><span>Клиентский интерфейс</span><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></div><div class="sc-sec-foot"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Данные команды остаются приватными</div></div>
+  </div>
+</div></article></div></div>
+      </div>
+    </section>
+
+    <section class="section ai-section agent-workflow-section" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-header center dark-header agent-workflow-heading">
+          <h2 id="ai-title">Ваша команда. Ваши AI-агенты.<br><span>Один рабочий процесс.</span></h2>
+          <p>Назначайте задачи разработчикам и AI-агентам, работайте вместе и контролируйте каждый результат.</p>
+        </div>
+        <div class="agent-workflow-layout">
+          <div class="agent-workflow-copy">
+            <h3>Работайте вместе.<br><span>С помощью AI.</span></h3>
+            <p>Расширяйте возможности команды с внешними AI-агентами, сохраняя решения за людьми.</p>
+            <div class="agent-workflow-benefits">
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+                <div><strong>Часть вашей команды</strong><p>Назначайте агентов на проекты и задачи вместе с разработчиками.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
+                <div><strong>Приватное сотрудничество</strong><p>Давайте инструкции, задавайте дополнительные вопросы и проверяйте отчёты агентов.</p></div>
+              </div>
+              <div class="agent-workflow-benefit">
+                <span class="agent-benefit-symbol"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <div><strong>Решения принимаете вы</strong><p>Управляйте доступом, проверяйте результаты и решайте, что увидит клиент.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="agent-workflow-console" aria-label="Пример совместной работы разработчика и AI-агента">
+            <div class="agent-demo-bar">
+              <div class="agent-demo-crumb"><span>Northstar Commerce</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>Форма обратной связи</strong></div>
+              <span class="agent-demo-status">В работе</span>
+            </div>
+            <div class="agent-demo-intro">
+              <h3>Форма обратной связи</h3>
+              <p>Анализ требований и планирование работ</p>
+            </div>
+            <div class="agent-demo-collaborators">
+              <div class="agent-demo-label">Назначенные участники</div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar human">JD</div>
+                <div class="agent-demo-person"><strong>Jamie Davis</strong><span>Разработчик</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+              <div class="agent-demo-member">
+                <div class="agent-demo-avatar agent"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></div>
+                <div class="agent-demo-person"><strong>Аналитик требований</strong><span>Внешний AI-агент</span></div>
+                <svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              </div>
+            </div>
+            <div class="agent-demo-instruction">
+              <span class="agent-demo-instruction-label"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Инструкция команды</span>
+              <p>Проверь требования к форме обратной связи. Найди неясности и предложи критерии приёмки.</p>
+            </div>
+            <div class="agent-demo-report">
+              <div class="agent-demo-report-heading"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> <strong>Приватный отчёт агента</strong><span>Только для команды</span></div>
+              <p>Нужно уточнить два требования:</p>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Защита от спама и проверка полей</div>
+              <div class="agent-demo-finding"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Поведение после отправки и обработка ошибок</div>
+              <div class="agent-demo-followup"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> Попросить агента уточнить <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+            </div>
+            <div class="agent-demo-review">
+              <div class="agent-demo-review-copy"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span><strong>Проверка человеком</strong><small>Только вы решаете, чем поделиться</small></span></div>
+              <span class="agent-demo-share">Поделиться с клиентом <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="agent-assistant-strip">
+          <div class="agent-assistant-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <div><strong>AI помогает ещё до начала работы.</strong><p>Превращайте пожелания клиентов в понятные требования — проверяйте каждое предложение перед применением.</p></div>
+        </div>
+        <p class="agent-workflow-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> Для внешних AI-агентов нужен настроенный исполнитель или провайдер. Доступ и публикация для клиента остаются под контролем команды.</p>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features" aria-labelledby="features-title"><div class="container"><div class="section-header center"><h2 id="features-title">Всё на своих местах.<br><span class="muted-heading">Ничего лишнего.</span></h2><p>Практичные инструменты для настоящей работы над клиентскими проектами, а не ещё одна панель, за которой нужно следить.</p></div><div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-layers"/></svg></span><h3>Проекты и задачи</h3><p>Объединяйте задачи в разделы, отслеживайте статусы и сохраняйте историю проекта в контексте.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-users"/></svg></span><h3>Команда и права</h3><p>Приглашайте разработчиков, управляйте доступом к проектам и отделяйте внутреннюю работу от общения с клиентом.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-message"/></svg></span><h3>Обсуждения и файлы</h3><p>Храните вопросы, комментарии, скриншоты и вложения рядом с соответствующей задачей.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Оценка и стоимость</h3><p>Учитывайте трудозатраты и стоимость проекта, разграничивая данные разработчика и клиента.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-file"/></svg></span><h3>Экспорт PDF и DOCX</h3><p>Создавайте аккуратные ТЗ и сметы из выбранных задач с настройкой содержимого и языка документа.</p></article>
+      <article class="feature-card"><span class="feature-icon"><svg class="icon"><use href="#i-bell"/></svg></span><h3>Всегда на связи</h3><p>Следите за событиями через приложение и настраиваемые уведомления по email, Push и Telegram.</p></article>
+    </div></div></section>
+
+    <section class="section branding-section" id="branding" aria-labelledby="branding-title">
+        <div class="container branding-grid">
+            <div class="branding-copy"><h2 id="branding-title">Ваша студия.<br><span class="muted-heading">Ваш клиентский опыт.</span></h2><p>Пусть каждое взаимодействие с клиентом отражает стиль вашей студии — от рабочего кабинета до приглашений и профессиональных документов.</p><div class="branding-points"><span><svg class="icon"><use href="#i-check"/></svg> Фирменный стиль кабинета и клиентских документов с логотипом</span><span><svg class="icon"><use href="#i-check"/></svg> Простой доступ клиента по email без регистрации</span><span><svg class="icon"><use href="#i-check"/></svg> Подключение собственного домена и профессиональной почты</span><span><svg class="icon"><use href="#i-check"/></svg> Английский, русский, турецкий и упрощённый китайский</span></div><div class="language-tags"><span>EN</span><span>RU</span><span>TR</span><span>ZH-CN</span><span>Скоро ещё</span></div>
+            </div>
+        <div class="branding-showcase">
+            <div class="brand-preview1"><img alt="Примеры фирменного оформления" src="/assets/img/brending.webp" style="width: 100%;"></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title"><div class="container"><div class="section-header center"><h2 id="pricing-title">Начните с малого.<br><span class="muted-heading">Растите вместе с проектами.</span></h2><p>Мы готовим тарифы для независимых разработчиков и студий. Открытая регистрация и платные подписки пока не запущены.</p></div><div class="pricing-grid"><article class="price-card"><h3>Базовый</h3><p>Для первого клиентского проекта.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> 1 активный проект</li><li><svg class="icon"><use href="#i-check"/></svg> 1 разработчик</li><li><svg class="icon"><use href="#i-check"/></svg> До 3 клиентов</li></ul><span class="plan-coming">Бесплатный · Планируется</span></article><article class="price-card"><h3>Фрилансер</h3><p>Для постоянного потока заказов.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> До 10 активных проектов</li><li><svg class="icon"><use href="#i-check"/></svg> 1 разработчик</li><li><svg class="icon"><use href="#i-check"/></svg> Базовое брендирование пространства</li></ul><span class="plan-coming">Платный · Планируется</span></article><article class="price-card featured-price"><h3>Студия</h3><p>Для командной работы агентств.</p><div class="price-divider"></div><ul><li><svg class="icon"><use href="#i-check"/></svg> До 100 активных проектов</li><li><svg class="icon"><use href="#i-check"/></svg> 10 разработчиков включено</li><li><svg class="icon"><use href="#i-check"/></svg> Расширенное брендирование и интеграции</li></ul><span class="plan-coming">Платный · Планируется</span></article></div><p class="pricing-disclaimer">Условия тарифов предварительные и могут измениться до запуска. Мы не направим вас на неготовую страницу оплаты.</p></div></section>
+
+    <section class="section close-section" aria-labelledby="close-title"><div class="container"><div class="close-card"><div class="close-orb" aria-hidden="true"></div><h2 id="close-title">Меньше согласований.<br>Больше <em>результатов.</em></h2><p>Каждая заявка получает понятный путь, а каждый проект — удобный способ дойти до результата.</p><div class="button-row"><a class="button button-light button-lg" href="#demo">Смотреть демоверсию <svg class="icon"><use href="#i-arrow"/></svg></a><a class="button button-outline-light button-lg" href="https://app.dev2done.web86.site/admin/login">Открыть приложение <svg class="icon"><use href="#i-external"/></svg></a></div></div>
+    <div class="faq" id="faq"><div class="faq-intro"><h2>Частые<br>вопросы.</h2></div><div class="faq-items"><details><summary>Нужно ли клиенту создавать аккаунт разработчика?<span class="faq-toggle">+</span></summary><p>Нет. Для клиентов предусмотрен отдельный вход в проект по ссылке из email, без аккаунта разработчика.</p></details><details><summary>Может ли клиент принимать готовую работу, а не только согласовывать требования?<span class="faq-toggle">+</span></summary><p>Да. Согласование задания и приёмка готового результата — разные этапы работы.</p></details><details><summary>AI-агенты подключаются автоматически?<span class="faq-toggle">+</span></summary><p>Dev2Done поддерживает внешних AI-агентов через API с разграничением прав. Для работы нужно отдельно настроить исполнителя или AI-провайдера.</p></details><details><summary>Можно ли выгрузить техническое задание?<span class="faq-toggle">+</span></summary><p>Да. Экспортируйте выбранные задачи в PDF или DOCX, с дополнительными сведениями и оценками, на одном из четырёх языков.</p></details><details><summary>Открыта ли публичная регистрация Dev2Done?<span class="faq-toggle">+</span></summary><p>Пока нет. Мы готовим публичную регистрацию. Существующие пользователи уже могут входить в приложение.</p></details></div></div></div></section>
+  </main>
+  <dialog class="trial-dialog" id="trial-dialog" aria-labelledby="trial-title" aria-describedby="trial-description">
+    <button class="dialog-close" type="button" data-close-trial aria-label="Закрыть окно">×</button>
+    <div class="trial-orbit" aria-hidden="true">✦</div>
+    <h2 id="trial-title">Пробный период Studio скоро появится.</h2>
+    <p id="trial-description">Семидневный пробный период Studio запланирован к публичному запуску. Регистрация пока недоступна — тем временем посмотрите демонстрацию проекта.</p>
+    <div class="button-row"><a class="button button-primary" href="#demo" data-close-trial>Смотреть демо <svg class="icon"><use href="#i-arrow"/></svg></a><button class="button button-secondary" type="button" data-close-trial>Закрыть</button></div>
+  </dialog>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand">
+      <a class="brand" href="/ru/">
+          <span class="brand-icon"><img src="/assets/img/d2d-mark.svg" alt="" width="96" height="56"></span>
+          <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
+      </a><p>Создано для разработчиков.<br>Просто для клиентов.</p></div><div class="footer-links"><div><strong>Обзор</strong><a href="#demo">Демоверсия продукта</a><a href="#workflow">Как это работает</a><a href="#ai">AI и агенты</a><a href="#pricing">Тарифы</a></div><div><strong>Платформа</strong><a href="https://app.dev2done.web86.site/admin/login">Войти</a><a href="https://github.com/web86/project-brief" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#faq">FAQ</a></div></div></div><div class="footer-bottom"><span>© 2026 Dev2Done. Все права защищены.</span><span>От идеи до результата. <svg class="icon"><use href="#i-arrow"/></svg></span></div></div></footer>
+</body>
+</html>
