@@ -35,6 +35,7 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
   <link rel="stylesheet" href="/assets/css/capabilities.css?v=1">
   <link rel="stylesheet" href="/assets/css/agent-workflow.css?v=1">
   <link rel="stylesheet" href="/assets/css/languages.css?v=1">
+  <link rel="stylesheet" href="/assets/css/fullscreen-menu.css?v=1">
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/ambient-hero.js" defer></script>
   <script src="/assets/js/agent-workflow.js" defer></script>
@@ -72,12 +73,25 @@ html.d2d-leaving #site-loader{opacity:0;pointer-events:none}
         <span class="brand-name">Dev2Done<span class="brand-period">.</span></span>
       </a>
       <nav class="nav-links" id="main-nav" aria-label="Ana gezinme">
-        <a href="#demo">Ürün</a>
-        <a href="#workflow">Nasıl çalışır?</a>
-        <a href="#ai">AI ve ajanlar</a>
-        <a href="#features">Özellikler</a>
-        <a href="#pricing">Paketler</a>
-        <a class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">Giriş yap</a>
+      <div class="fullscreen-menu-top">
+        <a class="fullscreen-menu-brand" href="/tr/" aria-label="Dev2Done ana sayfa">
+          <img src="/assets/img/d2d-mark.svg" alt="" width="75" height="44">
+          <span>Dev2Done<span class="brand-period">.</span></span>
+        </a>
+        <button type="button" class="fullscreen-menu-close" aria-label="Menüyü kapat"><span class="fullscreen-menu-cross" aria-hidden="true"></span></button>
+      </div>
+      <div class="fullscreen-menu-links">
+        <a style="--menu-index:0" href="#demo">Ürün</a>
+        <a style="--menu-index:1" href="#workflow">Nasıl çalışır?</a>
+        <a style="--menu-index:2" href="#ai">AI ve ajanlar</a>
+        <a style="--menu-index:3" href="#features">Özellikler</a>
+        <a style="--menu-index:4" href="#pricing">Paketler</a>
+        <a style="--menu-index:5" class="nav-mobile-login" href="https://app.dev2done.web86.site/admin/login">Giriş yap</a>
+      </div>
+      <div class="fullscreen-menu-bottom">
+        <div class="fullscreen-menu-languages" role="group" aria-label="Dil seç"><a href="/" lang="en" hreflang="en" data-menu-language="en">EN</a><a href="/ru/" lang="ru" hreflang="ru" data-menu-language="ru">RU</a><a href="/tr/" lang="tr" hreflang="tr" data-menu-language="tr" aria-current="page">TR</a><a href="/zh-cn/" lang="zh-CN" hreflang="zh-CN" data-menu-language="zh">中文</a></div>
+        <a class="fullscreen-menu-demo" href="#demo">Demoyu keşfet <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
       </nav>
       <div class="nav-actions">
         <details class="language-switcher" id="language-switcher">

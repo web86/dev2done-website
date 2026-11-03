@@ -97,15 +97,67 @@
     const menu = document.querySelector('.menu-button');
     const nav = document.getElementById('main-nav');
     if (menu && nav) {
-      const closeMenu = () => { document.querySelector('.site-header')?.classList.remove('menu-open'); nav.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', document.documentElement.dataset.menuOpenLabel || 'Open menu'); };
-      menu.addEventListener('click', () => {
-        const opened = nav.classList.toggle('is-open'); document.querySelector('.site-header')?.classList.toggle('menu-open', opened);
+      const header = document.querySelector('.site-header');
+      const closeButton = nav.querySelector('.fullscreen-menu-close');
+      const background = [
+        document.querySelector('main'), document.querySelector('.site-footer'),
+        header?.querySelector('.nav-inner > .brand'),
+        header?.querySelector('.nav-actions')
+      ].filter(Boolean);
+      const isOpen = () => nav.classList.contains('is-open');
+      const setMenu = (opened, restoreFocus = false) => {
+        header?.classList.toggle('menu-open', opened);
+        nav.classList.toggle('is-open', opened);
+        document.documentElement.classList.toggle('fullscreen-menu-open', opened);
+        document.body.classList.toggle('fullscreen-menu-open', opened);
         menu.setAttribute('aria-expanded', String(opened));
-        menu.setAttribute('aria-label', opened ? (document.documentElement.dataset.menuCloseLabel || 'Close menu') : (document.documentElement.dataset.menuOpenLabel || 'Open menu'));
+        menu.setAttribute('aria-label', opened
+          ? (document.documentElement.dataset.menuCloseLabel || 'Close menu')
+          : (document.documentElement.dataset.menuOpenLabel || 'Open menu'));
+        background.forEach(el => { el.inert = opened; });
+        if (opened) {
+          if (languageSwitcher) languageSwitcher.open = false;
+          closeButton?.focus({ preventScroll:true });
+        } else if (restoreFocus) {
+          menu.focus({ preventScroll:true });
+        }
+      };
+      menu.addEventListener('click', () => setMenu(!isOpen()));
+      closeButton?.addEventListener('click', () => setMenu(false, true));
+      nav.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', () => setMenu(false));
       });
-      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-      document.addEventListener('click', e => { if (!nav.contains(e.target) && !menu.contains(e.target)) closeMenu(); });
+      nav.querySelectorAll('[data-menu-language]').forEach(link => {
+        link.addEventListener('click', event => {
+          const locale = link.dataset.menuLanguage;
+          if (!LOCALE_ROOTS[locale]) return;
+          rememberLocale(locale);
+          event.preventDefault();
+          const target = new URL(LOCALE_ROOTS[locale], window.location.origin);
+          target.hash = window.location.hash;
+          window.location.assign(target.href);
+        });
+      });
+      document.addEventListener('keydown', event => {
+        if (!isOpen()) return;
+        if (event.key === 'Escape') { event.preventDefault(); setMenu(false, true); return; }
+        if (event.key !== 'Tab') return;
+        const controls = [...nav.querySelectorAll('a[href],button:not([disabled])')]
+          .filter(el => el.getClientRects().length);
+        if (!controls.length) return;
+        const first = controls[0], last = controls[controls.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !nav.contains(document.activeElement))) {
+          event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !nav.contains(document.activeElement))) {
+          event.preventDefault(); first.focus();
+        }
+      });
+      document.addEventListener('click', event => {
+        if (isOpen() && !nav.contains(event.target) && !menu.contains(event.target)) setMenu(false);
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && isOpen()) setMenu(false);
+      }, {passive:true});
     }
 
     // The two roles show different synthetic views of exactly the same project.
